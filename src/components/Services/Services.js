@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import styles from "./Services.module.css";
 import { Banner } from "../../components";
 import { Grid } from "@material-ui/core";
@@ -7,6 +7,22 @@ import WhatWeDoData from "../../assets/static/services/WhatWeDo";
 import classNames from "classnames";
 
 const Services = () => {
+  const [mobileDevice, setMobileDevice] = useState(0);
+
+  useEffect(() => {
+    let size = window.innerWidth;
+    size >= 1200 ? setMobileDevice(0) : setMobileDevice(1);
+  }, []);
+
+  useLayoutEffect(() => {
+    function updateSize() {
+      setMobileDevice(window.innerWidth >= 1200 ? 0 : 1);
+    }
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <div className={styles.container}>
       <Banner />
@@ -42,28 +58,20 @@ const Services = () => {
           <div className={styles.cards}>
             {services.map((service, i) => {
               return (
-                <>
-                  <Grid
-                    key={i}
-                    container
-                    className={classNames(styles.cardRow, styles.largeDevice)}
-                    spacing={0}
-                  >
-                    {i % 2 === 0 ? (
-                      <LeftSide service={service} />
-                    ) : (
-                      <RightSide service={service} />
-                    )}
-                  </Grid>
-                  <Grid
-                    key={i}
-                    container
-                    className={classNames(styles.cardRow, styles.mobileDevice)}
-                    spacing={0}
-                  >
+                <Grid
+                  key={i}
+                  container
+                  className={classNames(styles.cardRow)}
+                  spacing={0}
+                >
+                  {i % 2 === 0 ? (
                     <LeftSide service={service} />
-                  </Grid>
-                </>
+                  ) : !mobileDevice ? (
+                    <RightSide service={service} />
+                  ) : (
+                    <LeftSide service={service} />
+                  )}
+                </Grid>
               );
             })}
           </div>

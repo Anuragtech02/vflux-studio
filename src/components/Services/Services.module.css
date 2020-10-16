@@ -127,10 +127,6 @@
   width: 70%;
 }
 
-.container .content .services .cards .mobileDevice {
-  display: none;
-}
-
 .container .content .services .cards .cardRow .mainImage img {
   width: 100%;
   -o-object-fit: cover;
@@ -190,12 +186,12 @@
   }
 }
 
-@media screen and (max-width: 960px) {
-  .cards .largeDevice {
-    display: none;
+@media screen and (max-width: 1350px) {
+  .cards {
+    width: 100%;
   }
-  .cards .mobileDevice {
-    display: block !important;
+  .cardRow .details {
+    padding: 15px 10px 15px 20px;
   }
 }
 /*# sourceMappingURL=Services.module.css.map */

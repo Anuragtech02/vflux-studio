@@ -2,6 +2,7 @@
 
 .container {
   justify-content: space-between;
+  flex-direction: row;
   height: 10vh;
 }
 .navLinks {
@@ -33,5 +34,17 @@
     .navLink {
       font-size: 2rem;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .navLinks {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navLinks {
+    width: 60%;
   }
 }
