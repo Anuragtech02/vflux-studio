@@ -83,4 +83,119 @@
   color: rgba(255, 255, 255, 0.8);
   text-indent: -1em;
 }
+
+.container .content .services {
+  padding: 100px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .content .services h3 {
+  color: var(--primaryColor);
+  margin: auto;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+
+.container .content .services h1 {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  margin: 30px auto;
+}
+
+.container .content .services h1 span {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.container .content .services .cards {
+  padding: 50px 0;
+  width: 70%;
+}
+
+.container .content .services .cards .mobileDevice {
+  display: none;
+}
+
+.container .content .services .cards .cardRow .mainImage img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .content .services .cards .cardRow .details {
+  padding: 20px 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .content .services .cards .cardRow .details i,
+.container .content .services .cards .cardRow .details p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 2rem;
+}
+
+.container .content .services .cards .cardRow .details h2 {
+  margin-top: 30px;
+  color: var(--primaryColor);
+}
+
+.container .content .services .cards .cardRow .details p {
+  margin: 10px 0;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
+}
+
+.container .content .services .cards .cardRow .alignRight {
+  text-align: right;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@media screen and (max-width: 1450px) {
+  .cardRow .details {
+    padding: 15px 30px;
+  }
+  .cardRow .details p {
+    font-size: 1rem;
+  }
+  .cardRow .details h2 {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cards .largeDevice {
+    display: none;
+  }
+  .cards .mobileDevice {
+    display: block !important;
+  }
+}
 /*# sourceMappingURL=Services.module.css.map */

@@ -37,5 +37,95 @@
         }
       }
     }
+    .services {
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        color: var(--primaryColor);
+        margin: auto;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+      }
+      h1 {
+        font-size: 2.5rem;
+        font-family: "Playfair Display", serif;
+        font-weight: 600;
+        margin: 30px auto;
+        span {
+          font-family: "Playfair Display", serif;
+          font-style: italic;
+          font-weight: 400;
+        }
+      }
+      .cards {
+        padding: 50px 0;
+        width: 70%;
+        .mobileDevice {
+          display: none;
+        }
+
+        .cardRow {
+          .mainImage img {
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .details {
+            padding: 20px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            i,
+            p {
+              color: rgba(255, 255, 255, 0.4);
+              font-size: 2rem;
+            }
+            h2 {
+              margin-top: 30px;
+              color: var(--primaryColor);
+            }
+            p {
+              margin: 10px 0;
+              line-height: 1.7rem;
+              font-size: 1.1rem;
+            }
+          }
+          .alignRight {
+            text-align: right;
+            align-items: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .cardRow {
+    .details {
+      padding: 15px 30px;
+      p {
+        font-size: 1rem;
+      }
+      h2 {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .cards {
+    .largeDevice {
+      display: none;
+    }
+    .mobileDevice {
+      display: block !important;
+    }
   }
 }
