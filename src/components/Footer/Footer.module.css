@@ -36,6 +36,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: rgba(255, 255, 255, 0.6);
+  height: 8vh;
 }
 
 .container .social {

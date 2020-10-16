@@ -60,8 +60,17 @@
 }
 
 .logo img {
-  max-width: 150px;
+  max-width: 200px;
   min-width: 100px;
   width: auto;
+}
+
+@media screen and (min-width: 2560px) {
+  .navLinks {
+    width: 40%;
+  }
+  .navLinks .navLink {
+    font-size: 2rem;
+  }
 }
 /*# sourceMappingURL=Navbar.module.css.map */
