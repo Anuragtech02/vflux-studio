@@ -12,7 +12,7 @@
 
 :root {
   --primaryColor: #d8b069;
-  --bgColor: #000;
+  --bgColor: rgb(20, 20, 20);
   --fixedWidth: 95%;
 }
 
@@ -25,5 +25,10 @@ body {
 
 .page {
   width: 100%;
+}
+
+.nav,
+.footer {
+  background: #000;
 }
 /*# sourceMappingURL=App.module.css.map */

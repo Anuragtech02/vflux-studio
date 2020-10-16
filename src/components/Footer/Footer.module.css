@@ -31,6 +31,11 @@
   margin: auto;
 }
 
+.noDecoration {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
 .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;

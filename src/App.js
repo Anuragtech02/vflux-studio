@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styles from "./App.module.css";
-import { Navbar, Footer, Home, Contact } from "./components";
+import { Navbar, Footer, Home, Contact, About } from "./components";
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
         <div className={styles.page}>
           <Switch>
             <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={Home} />
+            <Route path="/about" exact component={About} />
             <Route path="/contact" exact component={Contact} />
             <Route path="/our-services" exact component={Home} />
           </Switch>
