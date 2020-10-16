@@ -1,0 +1,41 @@
+@import "../../assets/CSS/Common.scss";
+
+.container {
+  .content {
+    padding: 100px 0;
+    .whatWeDoContainer {
+      width: 70%;
+      margin: auto;
+      background-image: url(../../assets/images/background.webp);
+      background-size: cover;
+      background-position: left;
+      background-repeat: no-repeat;
+
+      .whatWeDo {
+        padding: 50px;
+        background-color: rgba(0, 0, 0, 0.8);
+
+        .heading {
+          width: 100%;
+          h4 {
+            margin: auto;
+            width: fit-content;
+            text-transform: uppercase;
+            color: var(--primaryColor);
+            letter-spacing: 5px;
+            font-size: 1.1rem;
+          }
+        }
+        .gridContainer {
+          margin-top: 20px;
+          .task p {
+            font-size: 1rem;
+            line-height: 1.6rem;
+            color: rgba(255, 255, 255, 0.8);
+            text-indent: -1em;
+          }
+        }
+      }
+    }
+  }
+}
