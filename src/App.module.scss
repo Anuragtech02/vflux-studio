@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #d8b069;
+  --bgColor: #000;
+}
+body {
+  background: var(--bgColor);
+}
