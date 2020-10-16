@@ -7,3 +7,10 @@
   @extend .flexRow;
   flex-direction: column;
 }
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--fixedWidth);
+  margin: auto;
+}

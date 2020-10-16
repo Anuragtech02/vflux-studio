@@ -1,0 +1,28 @@
+@import "../../assets/CSS/Common.scss";
+
+.container {
+  justify-content: space-between;
+  height: 10vh;
+}
+.navLinks {
+  justify-content: space-between;
+  width: 30%;
+  .navLink {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    &:hover {
+      color: var(--primaryColor);
+    }
+  }
+}
+.logo {
+  img {
+    max-width: 150px;
+    min-width: 100px;
+    width: auto;
+  }
+}
