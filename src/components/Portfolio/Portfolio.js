@@ -25,9 +25,8 @@ const Portfolio = () => {
           new Isotope(isoRef.current, {
             itemSelector: ".grid-item",
             percentPosition: true,
-            layoutMode: "masonry",
             masonry: {
-              columnWidth: 100,
+              columnWidth: ".grid-sizer",
             },
           })
         );
@@ -79,15 +78,19 @@ const Portfolio = () => {
         </ul>
       </div>
       <div ref={isoRef} className="grid gallery">
+        <div className="grid-sizer"></div>
         {images.map((image, i) => {
           return (
-            <img
+            <div
               key={`${image.category + i}`}
-              src={image.image}
-              onLoad={() => setCount((curr) => curr + 1)}
               className={`grid-item ${image.category}`}
-              alt="gallery"
-            />
+            >
+              <img
+                src={image.image}
+                onLoad={() => setCount((curr) => curr + 1)}
+                alt="gallery"
+              />
+            </div>
           );
         })}
       </div>

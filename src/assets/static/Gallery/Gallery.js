@@ -3,6 +3,7 @@ import image2 from "../../images/services/image-2.webp";
 import image3 from "../../images/services/image-3.webp";
 import image4 from "../../images/services/image-4.webp";
 import image5 from "../../images/services/image-5.webp";
+import image6 from "../../images/services/image-6.webp";
 
 const images = [
   {
@@ -15,6 +16,10 @@ const images = [
   },
   {
     image: image3,
+    category: "animation",
+  },
+  {
+    image: image6,
     category: "animation",
   },
   {

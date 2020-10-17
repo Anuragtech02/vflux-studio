@@ -121,3 +121,25 @@
     }
   }
 }
+
+@media screen and (max-width: 700px) {
+  .contactInfo {
+    p {
+      width: 80% !important;
+    }
+  }
+  .mapForm {
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .contactInfo {
+    h1 {
+      font-size: 2.2rem !important;
+    }
+    .contactNo {
+      font-size: 0.8rem !important;
+    }
+  }
+}

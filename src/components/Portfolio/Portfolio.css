@@ -61,11 +61,18 @@
 
 .grid-item {
   position: relative;
-  float: left;
-  max-width: 25%;
-  min-width: 20%;
-  width: auto;
-  margin: 10px 0;
+  width: 25%;
+  margin: 15px 0;
+}
+
+.grid-item img {
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.grid-sizer {
+  width: 1%;
 }
 
 .is-selected {

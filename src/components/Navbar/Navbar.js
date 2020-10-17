@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useLayoutEffect } from "react";
 import styles from "./Navbar.module.css";
 import { Link, withRouter } from "react-router-dom";
 import logo from "../../assets/logo/vflux-logo.png";
@@ -37,7 +37,21 @@ const Navbar = ({ history }) => {
         });
         break;
     }
+    const updateHeight = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    if (window.innerWidth <= 800) updateHeight();
   }, [history.location.pathname]);
+
+  useLayoutEffect(() => {
+    const updateHeight = () => {
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    };
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
 
   const handleBurgerClick = () => {
     if (menuClicked === styles.nothing) {

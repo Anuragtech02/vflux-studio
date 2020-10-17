@@ -41,13 +41,16 @@
 }
 .grid-item {
   position: relative;
-  float: left;
-  max-width: 25%;
-  min-width: 20%;
-  width: auto;
-  margin: 10px 0;
+  width: 25%;
+  margin: 15px 0;
+  img {
+    max-width: 100%;
+    object-fit: cover;
+  }
 }
-
+.grid-sizer {
+  width: 1%;
+}
 .is-selected {
   color: var(--primaryColor);
   &:after {

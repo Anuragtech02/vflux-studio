@@ -119,7 +119,6 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  height: 100vh;
   width: 50vw;
   position: fixed;
   top: 0;
@@ -133,7 +132,7 @@
 }
 
 .navLinksMobile .navLink {
-  margin: 50px 0;
+  margin: 40px 0;
 }
 
 .navLinksMobile .navLink:nth-child(1) {
@@ -180,6 +179,7 @@
   right: 0;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
+  background: black;
 }
 
 .inactive {
