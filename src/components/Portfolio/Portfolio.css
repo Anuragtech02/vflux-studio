@@ -1,0 +1,42 @@
+.portfolio-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0;
+}
+
+.portfolio-menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15%;
+}
+
+.portfolio-menu ul li {
+  cursor: pointer;
+}
+
+.grid {
+  padding: 10px;
+}
+
+.grid-item {
+  float: left;
+  max-width: 25%;
+  min-width: 20%;
+  width: auto;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=Portfolio.css.map */

@@ -1,1 +1,66 @@
-/* No CSS *//*# sourceMappingURL=Home.module.css.map */
+.flexRow, .flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexColumn {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: var(--fixedWidth);
+  margin: auto;
+}
+
+.noDecoration {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+.container {
+  width: 100%;
+}
+
+.container .videoContainer .overlay video {
+  width: 100%;
+  height: 92vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container .portfolio {
+  padding: 50px 0;
+  width: 100%;
+}
+
+.container .portfolio h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: var(--primaryColor);
+  letter-spacing: 5px;
+  text-align: center;
+}
+/*# sourceMappingURL=Home.module.css.map */

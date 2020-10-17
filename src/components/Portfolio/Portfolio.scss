@@ -1,0 +1,25 @@
+.portfolio-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 15%;
+    li {
+      cursor: pointer;
+    }
+  }
+}
+.grid {
+  padding: 10px;
+}
+.grid-item {
+  float: left;
+  max-width: 25%;
+  min-width: 20%;
+  width: auto;
+  margin: 10px 0;
+}

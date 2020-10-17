@@ -41,4 +41,10 @@
     text-align: center;
   }
 }
+
+@media screen and (max-height: 700px) {
+  .bannerContainer {
+    height: 96vh;
+  }
+}
 /*# sourceMappingURL=Banner.module.css.map */

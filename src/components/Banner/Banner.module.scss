@@ -39,3 +39,9 @@
     }
   }
 }
+
+@media screen and (max-height: 700px) {
+  .bannerContainer {
+    height: 96vh;
+  }
+}

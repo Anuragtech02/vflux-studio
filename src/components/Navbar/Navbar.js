@@ -73,18 +73,46 @@ const Navbar = ({ history }) => {
           styles.largeDevice
         )}
       >
-        <Link className={styles.noDecoration} to="/">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/"
+        >
           <li className={classNames(styles.navLink, active.home)}>Home</li>
         </Link>
-        <Link className={styles.noDecoration} to="/about">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/about"
+        >
           <li className={classNames(styles.navLink, active.about)}>About Us</li>
         </Link>
-        <Link className={styles.noDecoration} to="/our-services">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/our-services"
+        >
           <li className={classNames(styles.navLink, active.services)}>
             Our Services
           </li>
         </Link>
-        <Link className={styles.noDecoration} to="/contact">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/contact"
+        >
           <li className={classNames(styles.navLink, active.contact)}>
             Contact Us
           </li>
@@ -111,18 +139,46 @@ const Navbar = ({ history }) => {
         <li className={styles.navLink}>
           <img src={logo} alt="logo" />
         </li>
-        <Link className={styles.noDecoration} to="/">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/"
+        >
           <li className={classNames(styles.navLink, active.home)}>Home</li>
         </Link>
-        <Link className={styles.noDecoration} to="/about">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/about"
+        >
           <li className={classNames(styles.navLink, active.about)}>About Us</li>
         </Link>
-        <Link className={styles.noDecoration} to="/our-services">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/our-services"
+        >
           <li className={classNames(styles.navLink, active.services)}>
             Our Services
           </li>
         </Link>
-        <Link className={styles.noDecoration} to="/contact">
+        <Link
+          className={styles.noDecoration}
+          onClick={() => {
+            setMenuClicked(styles.nothing);
+            setSidebar(styles.inactive);
+          }}
+          to="/contact"
+        >
           <li className={classNames(styles.navLink, active.contact)}>
             Contact Us
           </li>

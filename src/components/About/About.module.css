@@ -80,7 +80,7 @@
 }
 
 .container .header h1 span span {
-  color: #7f0397;
+  color: #eca4fa;
 }
 
 .container .header p {
@@ -170,6 +170,9 @@
 }
 
 @media screen and (max-width: 700px) {
+  .container .header p {
+    text-align: left;
+  }
   .container .quote h1 {
     font-size: 1.2rem;
   }
@@ -181,6 +184,35 @@
   }
   .container .header p {
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container .quote {
+    padding: 5px;
+  }
+  .container .quote h1 {
+    font-size: 1rem;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .container .services {
+    width: 90%;
+  }
+  .container .services .service p {
+    width: 100%;
+  }
+  .container .header p {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container .header,
+  .container .services {
+    padding: 50px 0;
   }
 }
 /*# sourceMappingURL=About.module.css.map */

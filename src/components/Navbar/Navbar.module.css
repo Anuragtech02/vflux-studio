@@ -248,5 +248,23 @@
     display: flex !important;
     padding: 20%;
   }
+  .logo img {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navLinksMobile {
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .container {
+    height: 14vh;
+  }
 }
 /*# sourceMappingURL=Navbar.module.css.map */
