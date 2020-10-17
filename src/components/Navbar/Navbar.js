@@ -1,19 +1,49 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import logo from "../../assets/logo/vflux-logo.png";
 import classNames from "classnames";
 
-const Navbar = () => {
+const Navbar = ({ history }) => {
   const [menuClicked, setMenuClicked] = useState(styles.nothing);
   const [sidebar, setSidebar] = useState(styles.inactive);
+  const [active, setActive] = useState({
+    home: styles.nothing,
+    about: styles.nothing,
+    services: styles.nothing,
+    contact: styles.nothing,
+  });
+
+  useEffect(() => {
+    switch (history.location.pathname) {
+      case "/":
+        setActive({ home: styles.active });
+        break;
+      case "/about":
+        setActive({ about: styles.active });
+        break;
+      case "/our-services":
+        setActive({ services: styles.active });
+        break;
+      case "/contact":
+        setActive({ contact: styles.active });
+        break;
+      default:
+        setActive({
+          home: styles.nothing,
+          about: styles.nothing,
+          services: styles.nothing,
+          contact: styles.nothing,
+        });
+        break;
+    }
+  }, [history.location.pathname]);
 
   const handleBurgerClick = () => {
     if (menuClicked === styles.nothing) {
       setMenuClicked(styles.clicked);
       setSidebar(styles.sidebar);
       const navLinks = document.querySelectorAll("#sidebar li");
-      console.log(navLinks);
       navLinks.forEach((link, i) => {
         if (link.style.animation) {
           link.style.animation = "";
@@ -44,16 +74,20 @@ const Navbar = () => {
         )}
       >
         <Link className={styles.noDecoration} to="/">
-          <li className={styles.navLink}>Home</li>
+          <li className={classNames(styles.navLink, active.home)}>Home</li>
         </Link>
         <Link className={styles.noDecoration} to="/about">
-          <li className={styles.navLink}>About Us</li>
+          <li className={classNames(styles.navLink, active.about)}>About Us</li>
         </Link>
         <Link className={styles.noDecoration} to="/our-services">
-          <li className={styles.navLink}>Our Services</li>
+          <li className={classNames(styles.navLink, active.services)}>
+            Our Services
+          </li>
         </Link>
         <Link className={styles.noDecoration} to="/contact">
-          <li className={styles.navLink}>Contact Us</li>
+          <li className={classNames(styles.navLink, active.contact)}>
+            Contact Us
+          </li>
         </Link>
       </ul>
       <div
@@ -78,20 +112,24 @@ const Navbar = () => {
           <img src={logo} alt="logo" />
         </li>
         <Link className={styles.noDecoration} to="/">
-          <li className={styles.navLink}>Home</li>
+          <li className={classNames(styles.navLink, active.home)}>Home</li>
         </Link>
         <Link className={styles.noDecoration} to="/about">
-          <li className={styles.navLink}>About Us</li>
+          <li className={classNames(styles.navLink, active.about)}>About Us</li>
         </Link>
         <Link className={styles.noDecoration} to="/our-services">
-          <li className={styles.navLink}>Our Services</li>
+          <li className={classNames(styles.navLink, active.services)}>
+            Our Services
+          </li>
         </Link>
         <Link className={styles.noDecoration} to="/contact">
-          <li className={styles.navLink}>Contact Us</li>
+          <li className={classNames(styles.navLink, active.contact)}>
+            Contact Us
+          </li>
         </Link>
       </ul>
     </nav>
   );
 };
 
-export default Navbar;
+export default withRouter(Navbar);
