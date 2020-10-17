@@ -7,9 +7,32 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 15%;
+    // width: 15%;
     li {
       cursor: pointer;
+      position: relative;
+      text-align: center;
+      margin: 0 10px;
+      transition: all 0.3s ease-in-out;
+      &:after {
+        background: none repeat scroll 0 0 transparent;
+        bottom: -2px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        background: var(--primaryColor);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+      }
+      &:hover {
+        color: var(--primaryColor);
+        &:after {
+          width: 120%;
+          left: -10%;
+        }
+      }
     }
   }
 }
@@ -17,9 +40,30 @@
   padding: 10px;
 }
 .grid-item {
+  position: relative;
   float: left;
   max-width: 25%;
   min-width: 20%;
   width: auto;
   margin: 10px 0;
+}
+
+.is-selected {
+  color: var(--primaryColor);
+  &:after {
+    width: 120% !important;
+    left: -10% !important;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .grid-item {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-item {
+    max-width: 100%;
+  }
 }
