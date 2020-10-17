@@ -44,6 +44,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   color: rgba(255, 255, 255, 0.6);
   height: 8vh;
 }
@@ -63,5 +67,28 @@
 
 .container .social i:hover {
   color: var(--primaryColor);
+}
+
+@media screen and (max-width: 1100px) {
+  .container .social {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container .social {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 /*# sourceMappingURL=Footer.module.css.map */

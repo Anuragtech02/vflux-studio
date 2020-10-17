@@ -2,6 +2,7 @@
 
 .container {
   justify-content: space-between;
+  flex-direction: row;
   color: rgba(255, 255, 255, 0.6);
   height: 8vh;
 
@@ -15,5 +16,28 @@
         color: var(--primaryColor);
       }
     }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .container {
+    .social {
+      width: 15%;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    .social {
+      width: 30%;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    justify-content: space-around;
   }
 }
