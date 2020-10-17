@@ -1,7 +1,7 @@
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styles from "./App.module.css";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import { CircularProgress } from "@material-ui/core";
 import { Navbar, Footer } from "./components";
 
 const Home = lazy(() => import("./components/Home/Home"));
@@ -12,7 +12,13 @@ const Contact = lazy(() => import("./components/Contact/Contact"));
 const App = () => {
   return (
     <Router>
-      <Suspense fallback={Loading}>
+      <Suspense
+        fallback={
+          <div className={styles.loading}>
+            <CircularProgress />
+          </div>
+        }
+      >
         <div className={styles.nav}>
           <Navbar />
         </div>
@@ -33,11 +39,3 @@ const App = () => {
 };
 
 export default App;
-
-const Loading = () => {
-  return (
-    <div className={styles.loading}>
-      <CircularProgress />
-    </div>
-  );
-};
