@@ -37,6 +37,12 @@ const Footer = () => {
             onClickSocial("https://instagram.com/");
           }}
         ></i>
+        <i
+          className="fab fa-linkedin-in"
+          onClick={() => {
+            onClickSocial("https://linkedin.com/");
+          }}
+        ></i>
       </div>
       <div className={styles.copyright}>
         <p>© 2020 Unified Consulting. All Right Reserved.</p>

@@ -8,13 +8,21 @@
 
   .social {
     justify-content: space-between;
-    width: 8%;
+    width: 10%;
     i {
       cursor: pointer;
       transition: all 0.2s ease-in-out;
       &:hover {
         color: var(--primaryColor);
       }
+    }
+  }
+}
+
+@media screen and (max-width: 1350px) {
+  .container {
+    .social {
+      width: 12%;
     }
   }
 }
