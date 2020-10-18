@@ -4,7 +4,7 @@ import homeVideo from "../../assets/videos/utalika.mp4";
 import Portfolio from "../Portfolio/Portfolio";
 import { Helmet } from "react-helmet";
 
-const Home = () => {
+const Home = ({ loading, setLoading }) => {
   React.useEffect(() => {
     if (sessionStorage.getItem("firstTime") === null) {
       sessionStorage.setItem("firstTime", "yes");
@@ -26,7 +26,7 @@ const Home = () => {
       </div>
       <div className={styles.portfolio}>
         <h3>Our Works</h3>
-        <Portfolio />
+        <Portfolio loading={loading} setLoading={setLoading} />
       </div>
     </div>
   );

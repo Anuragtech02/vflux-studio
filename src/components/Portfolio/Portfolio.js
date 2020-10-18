@@ -4,7 +4,7 @@ import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
 import { Modal } from "../../components";
 
-const Portfolio = () => {
+const Portfolio = ({ loading, setLoading }) => {
   const onClickMenu = (item) => {
     setFilterKey(item);
   };
@@ -20,6 +20,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     if (count === totalImages) {
+      if (loading) setLoading(false);
       if (isotope) {
         isotope.reloadItems();
       } else {

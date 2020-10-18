@@ -24,13 +24,7 @@ const App = () => {
         </div>
         <div className={styles.page}>
           <Switch>
-            <Route
-              path="/"
-              exact
-              component={() => (
-                <OpenComponent component={Home} location="Home" />
-              )}
-            />
+            <Route path="/" exact component={() => <OpenHome />} />
             <Route
               path="/about"
               exact
@@ -69,24 +63,24 @@ const OpenComponent = ({ component: Component, location }) => {
   const loadingTime = 500;
 
   React.useEffect(() => {
-    if (location === "Home") {
-      if (sessionStorage.getItem("firstTime") === null) {
-        console.log("Yes");
+    // if (location === "Home") {
+    //   if (sessionStorage.getItem("firstTime") === null) {
+    //     console.log("Yes");
 
-        setTimeout(() => {
-          setOpen(true);
-        }, 3000);
-      } else {
-        setTimeout(() => {
-          setOpen(true);
-        }, loadingTime);
-      }
-    } else {
-      setTimeout(() => {
-        setOpen(true);
-      }, loadingTime);
-    }
-  }, [location]);
+    //     setTimeout(() => {
+    //       setOpen(true);
+    //     }, 3000);
+    //   } else {
+    //     setTimeout(() => {
+    //       setOpen(true);
+    //     }, loadingTime);
+    //   }
+    // } else {
+    setTimeout(() => {
+      setOpen(true);
+    }, loadingTime);
+    // }
+  }, []);
 
   return (
     <>
@@ -97,6 +91,22 @@ const OpenComponent = ({ component: Component, location }) => {
           <CircularProgress />
         </div>
       )}
+    </>
+  );
+};
+
+const OpenHome = () => {
+  const [loading, setLoading] = React.useState(true);
+
+  return (
+    <>
+      {loading ? (
+        <div className={styles.loading}>
+          <CircularProgress />
+        </div>
+      ) : null}
+
+      <Home loading={loading} setLoading={setLoading} />
     </>
   );
 };
