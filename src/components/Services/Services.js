@@ -9,6 +9,7 @@ import {
   LazyLoadImage,
   trackWindowScroll,
 } from "react-lazy-load-image-component";
+import { Helmet } from "react-helmet";
 
 const Services = ({ scrollPosition }) => {
   const [mobileDevice, setMobileDevice] = useState(0);
@@ -29,6 +30,10 @@ const Services = ({ scrollPosition }) => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Vflux Studio | Services</title>
+        <meta name="description" content="Vflux Studio Services" />
+      </Helmet>
       <Banner />
       <div className={styles.content}>
         <div className={styles.whatWeDoContainer}>

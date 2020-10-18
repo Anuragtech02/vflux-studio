@@ -3,6 +3,7 @@ import styles from "./Contact.module.css";
 import { Grid } from "@material-ui/core";
 import classNames from "classnames";
 import { Banner } from "../../components";
+import { Helmet } from "react-helmet";
 
 const Contact = () => {
   const [name, setName] = useState("");
@@ -12,6 +13,10 @@ const Contact = () => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Vflux Studio | Contact</title>
+        <meta name="description" content="Vflux Studio Contact" />
+      </Helmet>
       <Banner />
       <div className={classNames(styles.contactInfo, styles.flexColumn)}>
         <h4>Contact Detail</h4>

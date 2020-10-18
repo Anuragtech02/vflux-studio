@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./About.module.css";
 import { Banner } from "../../components";
 import { Grid } from "@material-ui/core";
+import { Helmet } from "react-helmet";
 
 const About = () => {
   const data = [
@@ -29,6 +30,10 @@ const About = () => {
 
   return (
     <div className={styles.container}>
+      <Helmet>
+        <title>Vflux Studio | About</title>
+        <meta name="description" content="Vflux Studio About" />
+      </Helmet>
       <Banner />
       <div className={styles.content}>
         <div className={styles.header}>
