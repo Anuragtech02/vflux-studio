@@ -119,6 +119,9 @@ const Portfolio = () => {
                 }}
                 alt="gallery"
               />
+              <div className="title">
+                <h4>{image.category}</h4>
+              </div>
             </div>
           );
         })}
