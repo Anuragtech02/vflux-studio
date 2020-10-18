@@ -89,12 +89,13 @@
 .container .imageContainer .title {
   -ms-flex-item-align: start;
       align-self: flex-start;
-  padding: 10px;
+  padding-top: 5px;
 }
 
 .container .imageContainer .title h2 {
   text-transform: capitalize;
   font-weight: 600;
+  font-size: 0.8rem;
 }
 
 .container .iconBtn {

@@ -113,14 +113,14 @@ const Portfolio = () => {
               className={`grid-item ${image.category}`}
             >
               <img
-                src={image.image}
+                src={image.src}
                 onLoad={() => {
                   setCount((curr) => curr + 1);
                 }}
-                alt="gallery"
+                alt={image.title}
               />
               <div className="title">
-                <h4>{image.category}</h4>
+                <h4>{image.title}</h4>
               </div>
             </div>
           );

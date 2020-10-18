@@ -7,20 +7,20 @@ import classNames from "classnames";
 const Modal = ({ images, image, open }) => {
   const [index, setIndex] = useState(images.indexOf(image));
   const [mainImage, setMainImage] = useState(image.image);
-  const [title, setTitle] = useState(image.category);
+  const [title, setTitle] = useState(image.title);
   // const [isOpen, setIsOpen] = useState(open ? styles.open : styles.notOpen);
 
   useEffect(() => {
-    setMainImage(image.image);
-    setTitle(image.category);
+    setMainImage(image.src);
+    setTitle(image.title);
   }, [image]);
 
   const onClickLeft = (e) => {
     e.stopPropagation();
     if (index > 0) {
       setIndex((curr) => curr - 1);
-      setMainImage(() => images[index - 1].image);
-      setTitle(() => images[index - 1].category);
+      setMainImage(() => images[index - 1].src);
+      setTitle(() => images[index - 1].title);
     }
   };
 
@@ -28,8 +28,8 @@ const Modal = ({ images, image, open }) => {
     e.stopPropagation();
     if (index < images.length - 1) {
       setIndex((curr) => curr + 1);
-      setMainImage(() => images[index + 1].image);
-      setTitle(() => images[index + 1].category);
+      setMainImage(() => images[index + 1].src);
+      setTitle(() => images[index + 1].title);
     }
   };
 

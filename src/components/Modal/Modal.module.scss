@@ -29,10 +29,11 @@
     }
     .title {
       align-self: flex-start;
-      padding: 10px;
+      padding-top: 5px;
       h2 {
         text-transform: capitalize;
         font-weight: 600;
+        font-size: 0.8rem;
       }
     }
   }
