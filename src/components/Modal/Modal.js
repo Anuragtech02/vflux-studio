@@ -8,9 +8,14 @@ const Modal = ({ images, image, open }) => {
   const [index, setIndex] = useState(images.indexOf(image));
   const [mainImage, setMainImage] = useState(image.image);
   const [title, setTitle] = useState(image.category);
-  const [isOpen, setIsOpen] = useState(open ? styles.open : styles.notOpen);
+  // const [isOpen, setIsOpen] = useState(open ? styles.open : styles.notOpen);
 
-  const onClickLeft = () => {
+  useEffect(() => {
+    setMainImage(image.image);
+  }, [image]);
+
+  const onClickLeft = (e) => {
+    e.stopPropagation();
     if (index > 0) {
       setIndex((curr) => curr - 1);
       setMainImage(() => images[index - 1].image);
@@ -18,7 +23,8 @@ const Modal = ({ images, image, open }) => {
     }
   };
 
-  const onClickRight = () => {
+  const onClickRight = (e) => {
+    e.stopPropagation();
     if (index < images.length - 1) {
       setIndex((curr) => curr + 1);
       setMainImage(() => images[index + 1].image);
@@ -26,11 +32,12 @@ const Modal = ({ images, image, open }) => {
     }
   };
 
+  const onClickImage = (e) => {
+    e.stopPropagation();
+  };
+
   return (
-    <div
-      onClick={() => setIsOpen(open ? styles.notOpen : styles.open)}
-      className={classNames(styles.container, isOpen)}
-    >
+    <div className={classNames(styles.container)}>
       <IconButton
         onClick={onClickLeft}
         className={classNames(styles.prevImage, styles.iconBtn)}
@@ -38,11 +45,23 @@ const Modal = ({ images, image, open }) => {
         <i className="fas fa-arrow-left"></i>
       </IconButton>
       <div className={styles.imageContainer}>
-        <LazyLoadImage effect="black-and-white" src={mainImage} alt={title} />
-        <div className={styles.title}>
-          <h2>{title}</h2>
-        </div>
+        {open ? (
+          <>
+            <LazyLoadImage
+              onClick={onClickImage}
+              effect="black-and-white"
+              src={mainImage}
+              alt={title}
+            />
+            <div className={styles.title}>
+              <h2>{title}</h2>
+            </div>
+          </>
+        ) : (
+          <div>Loading...</div>
+        )}
       </div>
+
       <IconButton
         onClick={onClickRight}
         className={classNames(styles.nextImage, styles.iconBtn)}

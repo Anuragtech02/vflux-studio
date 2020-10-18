@@ -8,15 +8,15 @@
   left: 0;
   height: 100vh;
   background: rgb(34, 34, 34);
-  z-index: 100000;
   padding: 50px;
-
+  z-index: 100000;
   .imageContainer {
     max-width: 80%;
     width: fit-content;
     max-height: 80%;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -28,12 +28,11 @@
       height: auto;
     }
     .title {
-      position: absolute;
-      bottom: 10%;
-      left: 10px;
-      transform: translate3d(10px, 90%, 0);
+      align-self: flex-start;
+      padding: 10px;
       h2 {
         text-transform: capitalize;
+        font-weight: 600;
       }
     }
   }

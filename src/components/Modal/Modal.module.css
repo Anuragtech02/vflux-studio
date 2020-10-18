@@ -50,8 +50,8 @@
   left: 0;
   height: 100vh;
   background: #222222;
-  z-index: 100000;
   padding: 50px;
+  z-index: 100000;
 }
 
 .container .imageContainer {
@@ -64,6 +64,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -83,15 +87,14 @@
 }
 
 .container .imageContainer .title {
-  position: absolute;
-  bottom: 10%;
-  left: 10px;
-  -webkit-transform: translate3d(10px, 90%, 0);
-          transform: translate3d(10px, 90%, 0);
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 10px;
 }
 
 .container .imageContainer .title h2 {
   text-transform: capitalize;
+  font-weight: 600;
 }
 
 .container .iconBtn {

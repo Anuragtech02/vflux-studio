@@ -65,6 +65,7 @@
   position: relative;
   width: 24%;
   margin: 5px 0;
+  cursor: pointer;
 }
 
 .grid-item img {
@@ -84,6 +85,27 @@
 .is-selected:after {
   width: 120% !important;
   left: -10% !important;
+}
+
+.modal {
+  opacity: 0;
+  background: #242424 !important;
+  width: 100%;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  z-index: 100000;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+.modalClosed {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modalOpen {
+  opacity: 1;
 }
 
 @media screen and (max-width: 1250px) {

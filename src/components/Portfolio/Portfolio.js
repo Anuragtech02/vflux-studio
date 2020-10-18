@@ -15,6 +15,8 @@ const Portfolio = () => {
   const [filterKey, setFilterKey] = useState("*");
   const totalImages = images.length;
   const [count, setCount] = useState(0);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState(images[0]);
 
   useEffect(() => {
     if (count === totalImages) {
@@ -49,9 +51,25 @@ const Portfolio = () => {
   //   }
   // };
 
+  const [modalClass, setModalClass] = useState("modalClosed");
+
+  const openModal = (image) => {
+    setModalImage(() => image);
+    console.log(image);
+    setModalClass("modalOpen");
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalClass("modalClosed");
+    setModalOpen(false);
+  };
+
   return (
     <>
-      <Modal images={images} image={images[0]} open={true} />
+      <div onClick={closeModal} className={`modal ${modalClass}`}>
+        <Modal images={images} open={modalOpen} image={modalImage} />
+      </div>
       <div className="portfolio-menu">
         <ul>
           <li
@@ -90,6 +108,7 @@ const Portfolio = () => {
         {images.map((image, i) => {
           return (
             <div
+              onClick={() => openModal(image)}
               key={`${image.category + i}`}
               className={`grid-item ${image.category}`}
             >
