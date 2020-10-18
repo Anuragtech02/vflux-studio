@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Portfolio.css";
 import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
@@ -8,7 +8,7 @@ const Portfolio = () => {
     setFilterKey(item);
   };
 
-  const isoRef = createRef(null);
+  const isoRef = useRef(null);
 
   const [isotope, setIsotope] = useState(null);
   const [filterKey, setFilterKey] = useState("*");
