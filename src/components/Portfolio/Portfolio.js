@@ -2,12 +2,8 @@ import React, { useState, useEffect, createRef } from "react";
 import "./Portfolio.css";
 import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
-import {
-  LazyLoadImage,
-  trackWindowScroll,
-} from "react-lazy-load-image-component";
 
-const Portfolio = ({ scrollPosition }) => {
+const Portfolio = () => {
   const onClickMenu = (item) => {
     setFilterKey(item);
   };
@@ -18,10 +14,9 @@ const Portfolio = ({ scrollPosition }) => {
   const [filterKey, setFilterKey] = useState("*");
   const totalImages = images.length;
   const [count, setCount] = useState(0);
-  const intialImages = 10;
 
   useEffect(() => {
-    if (count === intialImages) {
+    if (count === totalImages) {
       if (isotope) {
         isotope.reloadItems();
       } else {
@@ -47,11 +42,11 @@ const Portfolio = ({ scrollPosition }) => {
     }
   }, [isotope, filterKey]);
 
-  const appendToIsotope = () => {
-    if (isotope) {
-      isotope.arrange({ filter: filterKey });
-    }
-  };
+  // const appendToIsotope = () => {
+  //   if (isotope) {
+  //     isotope.arrange({ filter: filterKey });
+  //   }
+  // };
 
   return (
     <>
@@ -96,21 +91,13 @@ const Portfolio = ({ scrollPosition }) => {
               key={`${image.category + i}`}
               className={`grid-item ${image.category}`}
             >
-              {i < intialImages ? (
-                <img
-                  src={image.image}
-                  onLoad={() => setCount((curr) => curr + 1)}
-                  alt="gallery"
-                />
-              ) : (
-                <LazyLoadImage
-                  src={image.image}
-                  effect="blur"
-                  scrollPosition={scrollPosition}
-                  onLoad={appendToIsotope}
-                  alt="gallery"
-                />
-              )}
+              <img
+                src={image.image}
+                onLoad={() => {
+                  setCount((curr) => curr + 1);
+                }}
+                alt="gallery"
+              />
             </div>
           );
         })}
@@ -119,4 +106,4 @@ const Portfolio = ({ scrollPosition }) => {
   );
 };
 
-export default trackWindowScroll(Portfolio);
+export default Portfolio;
