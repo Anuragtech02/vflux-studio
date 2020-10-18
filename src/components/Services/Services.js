@@ -5,8 +5,12 @@ import { Grid } from "@material-ui/core";
 import services from "../../assets/static/services/Services";
 import WhatWeDoData from "../../assets/static/services/WhatWeDo";
 import classNames from "classnames";
+import {
+  LazyLoadImage,
+  trackWindowScroll,
+} from "react-lazy-load-image-component";
 
-const Services = () => {
+const Services = ({ scrollPosition }) => {
   const [mobileDevice, setMobileDevice] = useState(0);
 
   useEffect(() => {
@@ -65,11 +69,20 @@ const Services = () => {
                   spacing={0}
                 >
                   {i % 2 === 0 ? (
-                    <LeftSide service={service} />
+                    <LeftSide
+                      service={service}
+                      scrollPosition={scrollPosition}
+                    />
                   ) : !mobileDevice ? (
-                    <RightSide service={service} />
+                    <RightSide
+                      service={service}
+                      scrollPosition={scrollPosition}
+                    />
                   ) : (
-                    <LeftSide service={service} />
+                    <LeftSide
+                      service={service}
+                      scrollPosition={scrollPosition}
+                    />
                   )}
                 </Grid>
               );
@@ -81,13 +94,18 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default trackWindowScroll(Services);
 
-const LeftSide = ({ service }) => {
+const LeftSide = ({ service, scrollPosition }) => {
   return (
     <>
       <Grid className={styles.mainImage} item md={6} sm={12}>
-        <img src={service.image} alt="service" />
+        <LazyLoadImage
+          scrollPosition={scrollPosition}
+          effect="blur"
+          src={service.image}
+          alt="service"
+        />
       </Grid>
       <Grid className={styles.details} item md={6} sm={12}>
         <i className={service.icon} />
@@ -98,7 +116,7 @@ const LeftSide = ({ service }) => {
   );
 };
 
-const RightSide = ({ service }) => {
+const RightSide = ({ service, scrollPosition }) => {
   return (
     <>
       <Grid
@@ -112,7 +130,12 @@ const RightSide = ({ service }) => {
         <p>{service.message}</p>
       </Grid>
       <Grid className={styles.mainImage} item md={6} sm={12}>
-        <img src={service.image} alt="service" />
+        <LazyLoadImage
+          scrollPosition={scrollPosition}
+          effect="blur"
+          src={service.image}
+          alt="service"
+        />
       </Grid>
     </>
   );
