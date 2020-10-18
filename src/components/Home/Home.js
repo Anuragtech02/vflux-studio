@@ -13,7 +13,6 @@ const Home = () => {
       </div>
       <div className={styles.portfolio}>
         <h3>Our Works</h3>
-
         <Portfolio />
       </div>
     </div>

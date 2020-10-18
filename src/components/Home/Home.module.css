@@ -63,4 +63,12 @@
   letter-spacing: 5px;
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+  .container .videoContainer .overlay video {
+    height: 86vh;
+    -o-object-position: 62%;
+       object-position: 62%;
+  }
+}
 /*# sourceMappingURL=Home.module.css.map */

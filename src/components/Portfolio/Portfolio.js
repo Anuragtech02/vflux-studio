@@ -2,9 +2,12 @@ import React, { useState, useEffect, createRef } from "react";
 import "./Portfolio.css";
 import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import {
+  LazyLoadImage,
+  trackWindowScroll,
+} from "react-lazy-load-image-component";
 
-const Portfolio = () => {
+const Portfolio = ({ scrollPosition }) => {
   const onClickMenu = (item) => {
     setFilterKey(item);
   };
@@ -15,9 +18,10 @@ const Portfolio = () => {
   const [filterKey, setFilterKey] = useState("*");
   const totalImages = images.length;
   const [count, setCount] = useState(0);
+  const intialImages = 10;
 
   useEffect(() => {
-    if (count === totalImages) {
+    if (count === intialImages) {
       if (isotope) {
         isotope.reloadItems();
       } else {
@@ -42,6 +46,12 @@ const Portfolio = () => {
         : isotope.arrange({ filter: `.${filterKey}` });
     }
   }, [isotope, filterKey]);
+
+  const appendToIsotope = () => {
+    if (isotope) {
+      isotope.arrange({ filter: filterKey });
+    }
+  };
 
   return (
     <>
@@ -86,11 +96,21 @@ const Portfolio = () => {
               key={`${image.category + i}`}
               className={`grid-item ${image.category}`}
             >
-              <img
-                src={image.image}
-                onLoad={() => setCount((curr) => curr + 1)}
-                alt="gallery"
-              />
+              {i < intialImages ? (
+                <img
+                  src={image.image}
+                  onLoad={() => setCount((curr) => curr + 1)}
+                  alt="gallery"
+                />
+              ) : (
+                <LazyLoadImage
+                  src={image.image}
+                  effect="blur"
+                  scrollPosition={scrollPosition}
+                  onLoad={appendToIsotope}
+                  alt="gallery"
+                />
+              )}
             </div>
           );
         })}
@@ -99,4 +119,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default trackWindowScroll(Portfolio);

@@ -23,3 +23,12 @@
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  .container {
+    .videoContainer .overlay video {
+      height: 86vh;
+      object-position: 62%;
+    }
+  }
+}

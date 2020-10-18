@@ -50,6 +50,50 @@ const images = [
     image: image5,
     category: "vr",
   },
+  {
+    image: image1,
+    category: "stills",
+  },
+  {
+    image: image2,
+    category: "stills",
+  },
+  {
+    image: image3,
+    category: "animation",
+  },
+  {
+    image: image6,
+    category: "animation",
+  },
+  {
+    image: image4,
+    category: "animation",
+  },
+  {
+    image: image5,
+    category: "vr",
+  },
+  {
+    image: image1,
+    category: "stills",
+  },
+  {
+    image: image2,
+    category: "stills",
+  },
+  {
+    image: image3,
+    category: "animation",
+  },
+  {
+    image: image4,
+    category: "animation",
+  },
+  {
+    image: image5,
+    category: "vr",
+  },
 ];
 
 export default images;
