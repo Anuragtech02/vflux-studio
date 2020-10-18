@@ -27,22 +27,30 @@ const App = () => {
             <Route
               path="/"
               exact
-              component={() => <OpenComponent component={Home} />}
+              component={() => (
+                <OpenComponent component={Home} location="Home" />
+              )}
             />
             <Route
               path="/about"
               exact
-              component={() => <OpenComponent component={About} />}
+              component={() => (
+                <OpenComponent component={About} location="About" />
+              )}
             />
             <Route
               path="/contact"
               exact
-              component={() => <OpenComponent component={Contact} />}
+              component={() => (
+                <OpenComponent component={Contact} location="Contact" />
+              )}
             />
             <Route
               path="/our-services"
               exact
-              component={() => <OpenComponent component={Services} />}
+              component={() => (
+                <OpenComponent component={Services} location="Services" />
+              )}
             />
           </Switch>
         </div>
@@ -56,15 +64,29 @@ const App = () => {
 
 export default App;
 
-const OpenComponent = ({ component: Component }) => {
+const OpenComponent = ({ component: Component, location }) => {
   const [open, setOpen] = React.useState(false);
   const loadingTime = 500;
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setOpen(true);
-    }, loadingTime);
-  }, []);
+    if (location === "Home") {
+      if (sessionStorage.getItem("firstTime") === null) {
+        console.log("Yes");
+
+        setTimeout(() => {
+          setOpen(true);
+        }, 3000);
+      } else {
+        setTimeout(() => {
+          setOpen(true);
+        }, loadingTime);
+      }
+    } else {
+      setTimeout(() => {
+        setOpen(true);
+      }, loadingTime);
+    }
+  }, [location]);
 
   return (
     <>

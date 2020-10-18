@@ -5,6 +5,14 @@ import Portfolio from "../Portfolio/Portfolio";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
+  React.useEffect(() => {
+    if (sessionStorage.getItem("firstTime") === null) {
+      sessionStorage.setItem("firstTime", "yes");
+    } else {
+      sessionStorage.setItem("firstTime", "no");
+    }
+  }, []);
+
   return (
     <div className={styles.container}>
       <Helmet>
