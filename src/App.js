@@ -24,10 +24,26 @@ const App = () => {
         </div>
         <div className={styles.page}>
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/about" exact component={About} />
-            <Route path="/contact" exact component={Contact} />
-            <Route path="/our-services" exact component={Services} />
+            <Route
+              path="/"
+              exact
+              component={() => <OpenComponent component={Home} />}
+            />
+            <Route
+              path="/about"
+              exact
+              component={() => <OpenComponent component={About} />}
+            />
+            <Route
+              path="/contact"
+              exact
+              component={() => <OpenComponent component={Contact} />}
+            />
+            <Route
+              path="/our-services"
+              exact
+              component={() => <OpenComponent component={Services} />}
+            />
           </Switch>
         </div>
         <footer className={styles.footer}>
@@ -39,3 +55,26 @@ const App = () => {
 };
 
 export default App;
+
+const OpenComponent = ({ component: Component }) => {
+  const [open, setOpen] = React.useState(false);
+  const loadingTime = 500;
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setOpen(true);
+    }, loadingTime);
+  }, []);
+
+  return (
+    <>
+      {open ? (
+        <Component />
+      ) : (
+        <div className={styles.loading}>
+          <CircularProgress />
+        </div>
+      )}
+    </>
+  );
+};
