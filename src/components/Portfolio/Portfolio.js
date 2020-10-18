@@ -24,7 +24,8 @@ const Portfolio = () => {
         setIsotope(
           new Isotope(isoRef.current, {
             itemSelector: ".grid-item",
-            percentPosition: true,
+            // percentPosition: true,
+            layoutMode: "masonry",
             masonry: {
               columnWidth: ".grid-sizer",
             },

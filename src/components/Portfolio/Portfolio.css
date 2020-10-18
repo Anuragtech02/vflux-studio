@@ -57,12 +57,14 @@
 
 .grid {
   padding: 10px;
+  position: relative;
+  width: 100%;
 }
 
 .grid-item {
   position: relative;
-  width: 25%;
-  margin: 15px 0;
+  width: 24%;
+  margin: 5px 0;
 }
 
 .grid-item img {
