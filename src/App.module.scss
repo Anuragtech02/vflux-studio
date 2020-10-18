@@ -12,6 +12,13 @@
   --primaryColor: #d8b069;
   --bgColor: rgb(20, 20, 20);
   --fixedWidth: 95%;
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--primaryColor);
+  }
 }
 body {
   background: var(--bgColor);

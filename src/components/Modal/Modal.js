@@ -12,6 +12,7 @@ const Modal = ({ images, image, open }) => {
 
   useEffect(() => {
     setMainImage(image.image);
+    setTitle(image.category);
   }, [image]);
 
   const onClickLeft = (e) => {

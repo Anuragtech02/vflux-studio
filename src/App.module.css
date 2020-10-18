@@ -16,6 +16,14 @@
   --fixedWidth: 95%;
 }
 
+:root ::-webkit-scrollbar {
+  width: 5px;
+}
+
+:root ::-webkit-scrollbar-thumb {
+  background: var(--primaryColor);
+}
+
 body {
   background: var(--bgColor);
   color: white;
