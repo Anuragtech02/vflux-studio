@@ -45,6 +45,7 @@
   position: relative;
   width: 24%;
   margin: 5px 0;
+
   img {
     max-width: 100%;
     object-fit: cover;
@@ -63,12 +64,28 @@
 
 @media screen and (max-width: 1250px) {
   .grid-item {
-    max-width: 40%;
+    width: 30%;
+    padding: 2px;
+  }
+  .grid-sizer {
+    width: 3.333%;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .grid-item {
-    max-width: 100%;
+    width: 48%;
+  }
+  .grid-sizer {
+    width: 1%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid-item {
+    width: 98%;
+  }
+  .grid-sizer {
+    width: 1%;
   }
 }
