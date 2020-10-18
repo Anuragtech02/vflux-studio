@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Portfolio.css";
 import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
+import { Modal } from "../../components";
 
 const Portfolio = () => {
   const onClickMenu = (item) => {
@@ -50,6 +51,7 @@ const Portfolio = () => {
 
   return (
     <>
+      <Modal images={images} image={images[0]} open={true} />
       <div className="portfolio-menu">
         <ul>
           <li
