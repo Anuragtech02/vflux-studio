@@ -5,10 +5,6 @@ import { Grid } from "@material-ui/core";
 import services from "../../assets/static/services/Services";
 import WhatWeDoData from "../../assets/static/services/WhatWeDo";
 import classNames from "classnames";
-import {
-  LazyLoadImage,
-  trackWindowScroll,
-} from "react-lazy-load-image-component";
 import { Helmet } from "react-helmet";
 
 const Services = ({ scrollPosition }) => {
@@ -99,18 +95,13 @@ const Services = ({ scrollPosition }) => {
   );
 };
 
-export default trackWindowScroll(Services);
+export default Services;
 
 const LeftSide = ({ service, scrollPosition }) => {
   return (
     <>
       <Grid className={styles.mainImage} item md={6} sm={12}>
-        <LazyLoadImage
-          scrollPosition={scrollPosition}
-          effect="blur"
-          src={service.image}
-          alt="service"
-        />
+        <img src={service.image} alt="service" />
       </Grid>
       <Grid className={styles.details} item md={6} sm={12}>
         <i className={service.icon} />
@@ -135,12 +126,7 @@ const RightSide = ({ service, scrollPosition }) => {
         <p>{service.message}</p>
       </Grid>
       <Grid className={styles.mainImage} item md={6} sm={12}>
-        <LazyLoadImage
-          scrollPosition={scrollPosition}
-          effect="blur"
-          src={service.image}
-          alt="service"
-        />
+        <img src={service.image} alt="service" />
       </Grid>
     </>
   );

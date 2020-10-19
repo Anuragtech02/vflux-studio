@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Portfolio.css";
 import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
+import Img from "react-optimized-image";
 import { Modal } from "../../components";
 
 const Portfolio = ({ loading, setLoading }) => {

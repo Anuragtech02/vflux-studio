@@ -6,12 +6,12 @@ import classNames from "classnames";
 
 const Modal = ({ images, image, open }) => {
   const [index, setIndex] = useState(images.indexOf(image));
-  const [mainImage, setMainImage] = useState(image.image);
+  const [mainImage, setMainImage] = useState(image.original);
   const [title, setTitle] = useState(image.title);
   // const [isOpen, setIsOpen] = useState(open ? styles.open : styles.notOpen);
 
   useEffect(() => {
-    setMainImage(image.src);
+    setMainImage(image.original);
     setTitle(image.title);
   }, [image]);
 

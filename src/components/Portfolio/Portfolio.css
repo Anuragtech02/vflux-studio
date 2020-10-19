@@ -65,6 +65,7 @@
   position: relative;
   width: 24%;
   margin: 5px 0;
+  min-height: 10px;
   cursor: pointer;
 }
 
@@ -165,7 +166,7 @@
 
 @media screen and (max-width: 600px) {
   .grid-item {
-    width: 98%;
+    width: 95%;
   }
   .grid-sizer {
     width: 1%;

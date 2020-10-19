@@ -11,11 +11,13 @@
     "classnames": "^2.2.6",
     "gh-pages": "^3.1.0",
     "isotope-layout": "^3.0.6",
+    "optimized-images-loader": "^0.4.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
     "react-infinite-scroll-component": "^5.1.0",
     "react-lazy-load-image-component": "^1.5.0",
+    "react-optimized-image": "^0.4.1",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
