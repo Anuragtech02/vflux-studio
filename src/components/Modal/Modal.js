@@ -47,14 +47,29 @@ const Modal = ({ images, image, open }) => {
         <i className="fas fa-arrow-left"></i>
       </IconButton>
       <div className={styles.imageContainer}>
-        <LazyLoadImage
-          onClick={onClickImage}
-          effect="black-and-white"
-          onLoad={() => setLoading(false)}
-          src={mainImage}
-          alt={title}
-          style={{ opacity: loading ? "0" : "1" }}
-        />
+        {image.category === "animation" ? (
+          open ? (
+            <iframe
+              onClick={onClickImage}
+              title="animation"
+              style={{ opacity: loading ? "0" : "1" }}
+              onLoad={() => setLoading(false)}
+              src={mainImage}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          ) : null
+        ) : (
+          <LazyLoadImage
+            onClick={onClickImage}
+            effect="black-and-white"
+            onLoad={() => setLoading(false)}
+            src={mainImage}
+            alt={title}
+            style={{ opacity: loading ? "0" : "1" }}
+          />
+        )}
         <div className={styles.title} style={{ opacity: loading ? "0" : "1" }}>
           <h2>{title}</h2>
         </div>

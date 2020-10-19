@@ -7,6 +7,10 @@ import ashdod5 from "../../images/Portfolio/ashdod_israel/ashdod-5.webp";
 import ashdod6 from "../../images/Portfolio/ashdod_israel/ashdod-6.webp";
 import ashdod7 from "../../images/Portfolio/ashdod_israel/ashdod-7.webp";
 
+//Animation
+
+import animThumb from "../../images/Portfolio/animation/animation_thumbnail1.webp";
+
 //EHAD, Israel
 import ehad1 from "../../images/Portfolio/ehad_israel/ehad-1.webp";
 import ehad2 from "../../images/Portfolio/ehad_israel/ehad-2.webp";
@@ -184,6 +188,15 @@ const images = [
     category: "stills",
     title: "Ashdod, Israel",
     original: ashdodOriginal7,
+  },
+
+  //Animation
+
+  {
+    src: animThumb,
+    category: "animation",
+    title: "Utalika, India",
+    original: "https://www.youtube.com/embed/T8g3dFFOw-o",
   },
 
   //VR

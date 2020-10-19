@@ -88,6 +88,13 @@
   transition: all 0.2s ease-in-out;
 }
 
+.container .imageContainer iframe {
+  width: 70vw;
+  height: 80vh;
+  -webkit-transition: all 0.2 ease-in-out;
+  transition: all 0.2 ease-in-out;
+}
+
 .container .imageContainer .title {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -108,6 +115,7 @@
   top: 50%;
   -webkit-transform: translate3d(10px, 50%, 0);
           transform: translate3d(10px, 50%, 0);
+  z-index: 10000;
 }
 
 .container .iconBtn i {
@@ -139,5 +147,20 @@
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .imageContainer {
+    max-width: 100% !important;
+    max-height: 90vh !important;
+  }
+  .imageContainer iframe {
+    height: 60vh !important;
+    width: 90vw !important;
+  }
+  .imageContainer img {
+    max-height: 95vh !important;
+    margin-top: 100px;
+  }
 }
 /*# sourceMappingURL=Modal.module.css.map */
