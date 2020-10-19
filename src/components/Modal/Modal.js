@@ -8,9 +8,10 @@ const Modal = ({ images, image, open }) => {
   const [index, setIndex] = useState(images.indexOf(image));
   const [mainImage, setMainImage] = useState(image.original);
   const [title, setTitle] = useState(image.title);
-  // const [isOpen, setIsOpen] = useState(open ? styles.open : styles.notOpen);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     setMainImage(image.original);
     setTitle(image.title);
   }, [image]);
@@ -19,7 +20,7 @@ const Modal = ({ images, image, open }) => {
     e.stopPropagation();
     if (index > 0) {
       setIndex((curr) => curr - 1);
-      setMainImage(() => images[index - 1].src);
+      setMainImage(() => images[index - 1].original);
       setTitle(() => images[index - 1].title);
     }
   };
@@ -28,7 +29,7 @@ const Modal = ({ images, image, open }) => {
     e.stopPropagation();
     if (index < images.length - 1) {
       setIndex((curr) => curr + 1);
-      setMainImage(() => images[index + 1].src);
+      setMainImage(() => images[index + 1].original);
       setTitle(() => images[index + 1].title);
     }
   };
@@ -46,21 +47,23 @@ const Modal = ({ images, image, open }) => {
         <i className="fas fa-arrow-left"></i>
       </IconButton>
       <div className={styles.imageContainer}>
-        {open ? (
-          <>
-            <LazyLoadImage
-              onClick={onClickImage}
-              effect="black-and-white"
-              src={mainImage}
-              alt={title}
-            />
-            <div className={styles.title}>
-              <h2>{title}</h2>
-            </div>
-          </>
-        ) : (
-          <div>Loading...</div>
-        )}
+        <LazyLoadImage
+          onClick={onClickImage}
+          effect="black-and-white"
+          onLoad={() => setLoading(false)}
+          src={mainImage}
+          alt={title}
+          style={{ opacity: loading ? "0" : "1" }}
+        />
+        <div className={styles.title} style={{ opacity: loading ? "0" : "1" }}>
+          <h2>{title}</h2>
+        </div>
+        <div
+          className={styles.loadingText}
+          style={{ opacity: loading ? "1" : "0" }}
+        >
+          Loading...
+        </div>
       </div>
 
       <IconButton

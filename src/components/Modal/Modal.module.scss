@@ -26,10 +26,12 @@
       max-height: 80vh;
       width: auto;
       height: auto;
+      transition: all 0.2s ease-in-out;
     }
     .title {
       align-self: flex-start;
       padding-top: 5px;
+      transition: all 0.2s ease-in-out;
       h2 {
         text-transform: capitalize;
         font-weight: 600;
@@ -59,4 +61,11 @@
 }
 .open {
   opacity: 1;
+}
+.loadingText {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }

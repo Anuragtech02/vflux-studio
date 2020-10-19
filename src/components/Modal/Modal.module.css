@@ -84,12 +84,16 @@
   max-height: 80vh;
   width: auto;
   height: auto;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .container .imageContainer .title {
   -ms-flex-item-align: start;
       align-self: flex-start;
   padding-top: 5px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .container .imageContainer .title h2 {
@@ -125,5 +129,15 @@
 
 .open {
   opacity: 1;
+}
+
+.loadingText {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 /*# sourceMappingURL=Modal.module.css.map */

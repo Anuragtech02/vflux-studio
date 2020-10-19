@@ -24,13 +24,7 @@ const App = () => {
         </div>
         <div className={styles.page}>
           <Switch>
-            <Route
-              path="/"
-              exact
-              component={() => (
-                <OpenComponent component={Home} location="Home" />
-              )}
-            />
+            <Route path="/" exact component={() => <OpenHome />} />
             <Route
               path="/about"
               exact
