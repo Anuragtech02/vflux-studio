@@ -67,6 +67,20 @@ const Portfolio = ({ loading, setLoading }) => {
     setModalOpen(false);
   };
 
+  const openVr = (image) => {
+    const a = document.createElement("a");
+
+    if (image.original.includes("vr_tour")) {
+      a.href = image.original;
+      a.target = "_blank";
+      a.click();
+    } else {
+      a.href = image.original;
+      a.target = "_blank";
+      a.click();
+    }
+  };
+
   return (
     <>
       <div onClick={closeModal} className={`modal ${modalClass}`}>
@@ -110,7 +124,9 @@ const Portfolio = ({ loading, setLoading }) => {
         {images.map((image, i) => {
           return (
             <div
-              onClick={() => openModal(image)}
+              onClick={() => {
+                image.category === "vr" ? openVr(image) : openModal(image);
+              }}
               key={`${image.category + i}`}
               className={`grid-item ${image.category}`}
             >
