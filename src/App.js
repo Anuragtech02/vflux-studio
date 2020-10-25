@@ -14,7 +14,8 @@ const App = () => {
 
   useLayoutEffect(() => {
     const setNavBackground = () => {
-      if (window.pageYOffset > 100) navbar.current.style.background = "#000";
+      if (window.pageYOffset > 100)
+        navbar.current.style.background = "rgba(0,0,0,0.4)";
       else navbar.current.style.background = "transparent";
     };
     window.addEventListener("scroll", setNavBackground);

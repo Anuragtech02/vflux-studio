@@ -1,9 +1,11 @@
 .bannerContainer {
   width: 100vw;
-  height: 90vh;
-  background-image: url(../../assets/images/about-us-bg-1.jpg);
+  height: 20vh;
   background-size: cover;
   background-repeat: no-repeat;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bannerContainer .banner {
@@ -18,7 +20,7 @@
           align-items: center;
   height: 100%;
   padding: 0 10px;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
 }
 
 .bannerContainer .banner h1 {
@@ -39,12 +41,6 @@
   .bannerContainer .banner h1 {
     font-size: 1.7rem;
     text-align: center;
-  }
-}
-
-@media screen and (max-height: 700px) {
-  .bannerContainer {
-    height: 96vh;
   }
 }
 /*# sourceMappingURL=Banner.module.css.map */

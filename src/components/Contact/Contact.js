@@ -19,7 +19,7 @@ const Contact = () => {
       </Helmet>
       <Banner />
       <div className={classNames(styles.contactInfo, styles.flexColumn)}>
-        <h4>Contact Detail</h4>
+        <h4>Contact Details</h4>
         <h1>
           How to <span>get to us</span>
         </h1>
@@ -29,7 +29,7 @@ const Contact = () => {
           services globally.
         </p>
         <p className={styles.contactNo}>
-          +91 9876543210 | INFO@VFLUXSTUDIO.COM
+          +91 9899357890 | CONNECT(AT)VFLUXSTUDIO.COM
         </p>
       </div>
       <Grid container className={styles.mapForm} spacing={4}>

@@ -139,6 +139,15 @@ const Portfolio = ({ loading, setLoading }) => {
               <div className="title">
                 <h4>{image.title}</h4>
               </div>
+              {image.category === "animation" ? (
+                <div className="type-icon play-icon">
+                  <i className="fas fa-play" />
+                </div>
+              ) : image.category === "vr" ? (
+                <div className="type-icon">
+                  <i className="fas fa-vr-cardboard" />
+                </div>
+              ) : null}
             </div>
           );
         })}

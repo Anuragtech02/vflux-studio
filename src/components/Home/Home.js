@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Home.module.css";
-import homeVideo from "../../assets/videos/utalika.mp4";
+import homeVideo from "../../assets/videos/utalika-1.mp4";
+import videPoster from "../../assets/videos/video-poster.webp";
 import Portfolio from "../Portfolio/Portfolio";
 import { Helmet } from "react-helmet";
 
@@ -20,7 +21,14 @@ const Home = ({ loading, setLoading }) => {
       </Helmet>
       <div className={styles.videoContainer}>
         <div className={styles.overlay}>
-          <video src={homeVideo} type="video/mp4" autoPlay muted loop />
+          <video
+            src={homeVideo}
+            type="video/mp4"
+            poster={videPoster}
+            autoPlay
+            muted
+            loop
+          />
         </div>
       </div>
       <h1 style={{ widht: "0", height: "0", opacity: "0" }}>

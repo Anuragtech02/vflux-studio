@@ -49,13 +49,13 @@
   top: 0;
   left: 0;
   height: 100vh;
-  background: #222222;
+  background: rgba(0, 0, 0, 0.9);
   padding: 50px;
   z-index: 100000;
 }
 
 .container .imageContainer {
-  max-width: 80%;
+  max-width: 90vw;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;

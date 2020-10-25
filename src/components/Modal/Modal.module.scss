@@ -7,11 +7,11 @@
   top: 0;
   left: 0;
   height: 100vh;
-  background: rgb(34, 34, 34);
+  background: rgba(0, 0, 0, 0.9);
   padding: 50px;
   z-index: 100000;
   .imageContainer {
-    max-width: 80%;
+    max-width: 90vw;
     width: fit-content;
     max-height: 80%;
     height: auto;

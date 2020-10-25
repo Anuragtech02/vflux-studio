@@ -167,6 +167,25 @@
   font-size: 1.1rem;
 }
 
+.container .content .services .cards .cardRow .details .iconTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.container .content .services .cards .cardRow .details .iconRight {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
 .container .content .services .cards .cardRow .alignRight {
   text-align: right;
   -webkit-box-align: end;
@@ -174,15 +193,55 @@
           align-items: flex-end;
 }
 
-@media screen and (max-width: 1450px) {
+@media screen and (max-width: 1580px) {
   .cardRow .details {
-    padding: 15px 30px;
+    padding: 0 30px !important;
+    padding-top: 15px !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
   }
   .cardRow .details p {
     font-size: 1rem;
   }
   .cardRow .details h2 {
-    margin-top: 20px;
+    margin-top: 0 !important;
+    margin-left: 20px;
+  }
+  .cardRow .details .iconTitle {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .cardRow .details {
+    padding: 0 30px !important;
+    padding-top: 15px !important;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+  }
+  .cardRow .details p {
+    font-size: 1rem;
+  }
+  .cardRow .details h2 {
+    margin-top: 0 !important;
+    margin-left: 20px;
+  }
+  .cardRow .details .iconTitle {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
   }
 }
 

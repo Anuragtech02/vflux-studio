@@ -108,8 +108,11 @@ const LeftSide = ({ service, scrollPosition }) => {
         <img src={service.image} alt="service" />
       </Grid>
       <Grid className={styles.details} item md={6} sm={12}>
-        <i className={service.icon} />
-        <h2>{service.title}</h2>
+        <div className={classNames(styles.iconTitle, styles.iconLeft)}>
+          <i className={service.icon} />
+          <h2>{service.title}</h2>
+        </div>
+
         <p>{service.message}</p>
       </Grid>
     </>
@@ -125,8 +128,11 @@ const RightSide = ({ service, scrollPosition }) => {
         md={6}
         sm={12}
       >
-        <i className={service.icon} />
-        <h2>{service.title}</h2>
+        <div className={classNames(styles.iconTitle, styles.iconRight)}>
+          <i className={service.icon} />
+          <h2>{service.title}</h2>
+        </div>
+
         <p>{service.message}</p>
       </Grid>
       <Grid className={styles.mainImage} item md={6} sm={12}>

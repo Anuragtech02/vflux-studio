@@ -80,9 +80,9 @@ const Modal = ({ images, image, open }) => {
               style={{ opacity: loading ? "0" : "1" }}
               onLoad={() => setLoading(false)}
               src={mainImage}
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           ) : null
         ) : (
