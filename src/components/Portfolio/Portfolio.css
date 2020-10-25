@@ -146,25 +146,13 @@
 
 .type-icon {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-}
-
-.type-icon i {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.play-icon {
   top: 50%;
   left: 50%;
-  bottom: auto;
-  right: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
 
-.play-icon i {
+.type-icon i {
   font-size: 2rem;
   color: white;
 }

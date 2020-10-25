@@ -29,7 +29,7 @@ const Contact = () => {
           services globally.
         </p>
         <p className={styles.contactNo}>
-          +91 9899357890 | CONNECT(AT)VFLUXSTUDIO.COM
+          +91 9899357890 | CONNECT@VFLUXSTUDIO.COM
         </p>
       </div>
       <Grid container className={styles.mapForm} spacing={4}>

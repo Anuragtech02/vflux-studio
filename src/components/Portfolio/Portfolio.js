@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Portfolio.css";
 import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
-import Img from "react-optimized-image";
 import { Modal } from "../../components";
 
 const Portfolio = ({ loading, setLoading }) => {
@@ -135,6 +134,12 @@ const Portfolio = ({ loading, setLoading }) => {
                   setCount((curr) => curr + 1);
                 }}
                 alt={image.title}
+                style={{
+                  opacity:
+                    image.category === "animation" || image.category === "vr"
+                      ? "0.8"
+                      : "1",
+                }}
               />
               <div className="title">
                 <h4>{image.title}</h4>

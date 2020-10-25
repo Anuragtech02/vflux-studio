@@ -112,18 +112,8 @@
 
 .type-icon {
   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  i {
-    font-size: 1.2rem;
-    color: rgba($color: #fff, $alpha: 0.7);
-  }
-}
-.play-icon {
   top: 50%;
   left: 50%;
-  bottom: auto;
-  right: auto;
   transform: translate(-50%, -50%);
   i {
     font-size: 2rem;
