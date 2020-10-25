@@ -29,7 +29,14 @@ body {
 .page {
   width: 100vw;
 }
-.nav,
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: transparent;
+  width: 100vw;
+  transition: all 0.4s ease-in-out;
+}
 .footer {
   background: #000;
   width: 100vw;

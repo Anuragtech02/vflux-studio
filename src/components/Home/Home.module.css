@@ -46,7 +46,7 @@
 
 .container .videoContainer .overlay video {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
 }

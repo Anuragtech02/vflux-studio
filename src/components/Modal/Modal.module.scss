@@ -19,7 +19,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
     img {
       object-fit: cover;
       max-width: 100%;
@@ -48,7 +51,6 @@
     position: absolute;
     left: 10px;
     top: 50%;
-    transform: translate3d(10px, 50%, 0);
     z-index: 10000;
     i {
       color: white;
@@ -57,7 +59,7 @@
   .nextImage {
     left: auto;
     right: 10px;
-    transform: translate3d(auto, 50%, 10px);
+    top: 50%;
   }
 }
 
@@ -82,11 +84,10 @@
       height: 60vh !important;
       width: 90vw !important;
     }
-    max-width: 100% !important;
+    max-width: 90% !important;
     max-height: 90vh !important;
     img {
       max-height: 95vh !important;
-      margin-top: 100px;
     }
   }
 }

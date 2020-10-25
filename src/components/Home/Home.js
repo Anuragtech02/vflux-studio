@@ -16,14 +16,16 @@ const Home = ({ loading, setLoading }) => {
   return (
     <div className={styles.container}>
       <Helmet>
-        <title>Vflux Studio | Home</title>
-        <meta name="description" content="Vflux Studio Home" />
+        <title>Vflux Studio | A professional visualization studio</title>
       </Helmet>
       <div className={styles.videoContainer}>
         <div className={styles.overlay}>
           <video src={homeVideo} type="video/mp4" autoPlay muted loop />
         </div>
       </div>
+      <h1 style={{ widht: "0", height: "0", opacity: "0" }}>
+        Vflux Studio | A professional visualization studio{" "}
+      </h1>
       <div className={styles.portfolio}>
         <h3>Our Works</h3>
         <Portfolio loading={loading} setLoading={setLoading} />

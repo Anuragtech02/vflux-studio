@@ -74,7 +74,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
 }
 
 .container .imageContainer img {
@@ -113,8 +117,6 @@
   position: absolute;
   left: 10px;
   top: 50%;
-  -webkit-transform: translate3d(10px, 50%, 0);
-          transform: translate3d(10px, 50%, 0);
   z-index: 10000;
 }
 
@@ -125,8 +127,7 @@
 .container .nextImage {
   left: auto;
   right: 10px;
-  -webkit-transform: translate3d(auto, 50%, 10px);
-          transform: translate3d(auto, 50%, 10px);
+  top: 50%;
 }
 
 .notOpen {
@@ -151,7 +152,7 @@
 
 @media screen and (max-width: 800px) {
   .imageContainer {
-    max-width: 100% !important;
+    max-width: 90% !important;
     max-height: 90vh !important;
   }
   .imageContainer iframe {
@@ -160,7 +161,6 @@
   }
   .imageContainer img {
     max-height: 95vh !important;
-    margin-top: 100px;
   }
 }
 /*# sourceMappingURL=Modal.module.css.map */

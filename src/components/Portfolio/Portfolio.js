@@ -57,7 +57,6 @@ const Portfolio = ({ loading, setLoading }) => {
 
   const openModal = (image) => {
     setModalImage(() => image);
-    console.log(image);
     setModalClass("modalOpen");
     setModalOpen(true);
   };

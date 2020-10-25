@@ -14,23 +14,47 @@ const Modal = ({ images, image, open }) => {
     setLoading(true);
     setMainImage(image.original);
     setTitle(image.title);
-  }, [image]);
+    setIndex(images.indexOf(image));
+  }, [image, images]);
 
   const onClickLeft = (e) => {
     e.stopPropagation();
     if (index > 0) {
-      setIndex((curr) => curr - 1);
-      setMainImage(() => images[index - 1].original);
-      setTitle(() => images[index - 1].title);
+      if (
+        images[index - 1].category === "animation" ||
+        images[index - 1].category === "vr"
+      ) {
+        console.log("Left inside");
+        if (index - 2 >= 0) {
+          setIndex((curr) => curr - 2);
+          setMainImage(() => images[index - 2].original);
+          setTitle(() => images[index - 2].title);
+        }
+      } else {
+        setIndex((curr) => curr - 1);
+        setMainImage(() => images[index - 1].original);
+        setTitle(() => images[index - 1].title);
+      }
     }
   };
 
   const onClickRight = (e) => {
     e.stopPropagation();
     if (index < images.length - 1) {
-      setIndex((curr) => curr + 1);
-      setMainImage(() => images[index + 1].original);
-      setTitle(() => images[index + 1].title);
+      if (
+        images[index + 1].category === "animation" ||
+        images[index + 1].category === "vr"
+      ) {
+        if (index + 2 <= images.length - 1) {
+          setIndex((curr) => curr + 2);
+          setMainImage(() => images[index + 2].original);
+          setTitle(() => images[index + 2].title);
+        }
+      } else {
+        setIndex((curr) => curr + 1);
+        setMainImage(() => images[index + 1].original);
+        setTitle(() => images[index + 1].title);
+      }
     }
   };
 
@@ -42,6 +66,7 @@ const Modal = ({ images, image, open }) => {
     <div className={classNames(styles.container)}>
       <IconButton
         onClick={onClickLeft}
+        style={{ display: image.category === "animation" ? "none" : "block" }}
         className={classNames(styles.prevImage, styles.iconBtn)}
       >
         <i className="fas fa-arrow-left"></i>
@@ -83,6 +108,7 @@ const Modal = ({ images, image, open }) => {
 
       <IconButton
         onClick={onClickRight}
+        style={{ display: image.category === "animation" ? "none" : "block" }}
         className={classNames(styles.nextImage, styles.iconBtn)}
       >
         <i className="fas fa-arrow-right"></i>

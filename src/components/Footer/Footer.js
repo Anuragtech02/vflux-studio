@@ -16,7 +16,9 @@ const Footer = () => {
         <i
           className="fab fa-facebook-square"
           onClick={() => {
-            onClickSocial("https://facebook.com/");
+            onClickSocial(
+              "https://www.facebook.com/Vfluxstudio-102258501673102/?modal=admin_todo_tour"
+            );
           }}
         ></i>
         <i
@@ -28,7 +30,7 @@ const Footer = () => {
         <i
           className="fab fa-youtube"
           onClick={() => {
-            onClickSocial("https://youtube.com/");
+            onClickSocial("https://www.youtube.com/");
           }}
         ></i>
         <i

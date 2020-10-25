@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy, useRef, useLayoutEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styles from "./App.module.css";
 import { CircularProgress } from "@material-ui/core";
@@ -10,6 +10,20 @@ const Services = lazy(() => import("./components/Services/Services"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
 
 const App = () => {
+  const navbar = useRef(null);
+
+  useLayoutEffect(() => {
+    const setNavBackground = () => {
+      if (window.pageYOffset > 100) navbar.current.style.background = "#000";
+      else navbar.current.style.background = "transparent";
+    };
+    window.addEventListener("scroll", setNavBackground);
+
+    setNavBackground();
+
+    return () => window.removeEventListener("scroll", setNavBackground);
+  }, []);
+
   return (
     <Router>
       <Suspense
@@ -19,7 +33,7 @@ const App = () => {
           </div>
         }
       >
-        <div className={styles.nav}>
+        <div ref={navbar} className={styles.nav}>
           <Navbar />
         </div>
         <div className={styles.page}>
