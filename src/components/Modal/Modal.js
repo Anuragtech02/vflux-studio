@@ -12,7 +12,11 @@ const Modal = ({ images, image, open }) => {
 
   useEffect(() => {
     setLoading(true);
-    setMainImage(image.original);
+    image.category === "stills"
+      ? setMainImage(image.original)
+      : setMainImage(image.modal);
+
+    // setMainImage(image.original);
     setTitle(image.title);
     setIndex(images.indexOf(image));
   }, [image, images]);
@@ -20,46 +24,35 @@ const Modal = ({ images, image, open }) => {
   const onClickLeft = (e) => {
     e.stopPropagation();
     if (index > 0) {
-      if (
-        images[index - 1].category === "animation" ||
-        images[index - 1].category === "vr"
-      ) {
-        console.log("Left inside");
-        if (index - 2 >= 0) {
-          setIndex((curr) => curr - 2);
-          setMainImage(() => images[index - 2].original);
-          setTitle(() => images[index - 2].title);
-        }
-      } else {
-        setIndex((curr) => curr - 1);
-        setMainImage(() => images[index - 1].original);
-        setTitle(() => images[index - 1].title);
-      }
+      setIndex((curr) => curr - 1);
+      images[index - 1].category === "stills"
+        ? setMainImage(() => images[index - 1].original)
+        : setMainImage(() => images[index - 1].modal);
+      // setMainImage(() => images[index - 1].original);
+      setTitle(() => images[index - 1].title);
     }
   };
 
   const onClickRight = (e) => {
     e.stopPropagation();
     if (index < images.length - 1) {
-      if (
-        images[index + 1].category === "animation" ||
-        images[index + 1].category === "vr"
-      ) {
-        if (index + 2 <= images.length - 1) {
-          setIndex((curr) => curr + 2);
-          setMainImage(() => images[index + 2].original);
-          setTitle(() => images[index + 2].title);
-        }
-      } else {
-        setIndex((curr) => curr + 1);
-        setMainImage(() => images[index + 1].original);
-        setTitle(() => images[index + 1].title);
-      }
+      setIndex((curr) => curr + 1);
+      images[index + 1].category === "stills"
+        ? setMainImage(() => images[index + 1].original)
+        : setMainImage(() => images[index + 1].modal);
+      // setMainImage(() => images[index + 1].original);
+      setTitle(() => images[index + 1].title);
     }
   };
 
   const onClickImage = (e) => {
     e.stopPropagation();
+    if (images[index].category === "vr") {
+      const a = document.createElement("a");
+      a.href = images[index].original;
+      a.target = "_blank";
+      a.click();
+    }
   };
 
   return (
@@ -72,6 +65,9 @@ const Modal = ({ images, image, open }) => {
         <i className="fas fa-arrow-left"></i>
       </IconButton>
       <div className={styles.imageContainer}>
+        <IconButton className={styles.closeBtn}>
+          <i className="fas fa-times"></i>
+        </IconButton>
         {image.category === "animation" ? (
           open ? (
             <iframe
@@ -92,7 +88,10 @@ const Modal = ({ images, image, open }) => {
             onLoad={() => setLoading(false)}
             src={mainImage}
             alt={title}
-            style={{ opacity: loading ? "0" : "1" }}
+            style={{
+              opacity: loading ? "0" : "1",
+              cursor: images[index].category === "vr" ? "pointer" : "auto",
+            }}
           />
         )}
         <div className={styles.title} style={{ opacity: loading ? "0" : "1" }}>

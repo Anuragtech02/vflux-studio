@@ -107,8 +107,15 @@ import hoffeinOriginal3 from "../../images/Portfolio_Original/hoffein_israel/hof
 import kopecOriginal1 from "../../images/Portfolio_Original/kopec_prague/kopec-1.webp";
 import kopecOriginal2 from "../../images/Portfolio_Original/kopec_prague/kopec-2.webp";
 import kopecOriginal3 from "../../images/Portfolio_Original/kopec_prague/kopec-3.webp";
-
-import kopecOriginal9 from "../../images/Portfolio_Original/kopec_prague/kopec-9.webp";
+import kopecOriginal4 from "../../images/Portfolio/kopec_prague/kopec-4.webp";
+import kopecOriginal5 from "../../images/Portfolio/kopec_prague/kopec-5.webp";
+import kopecOriginal6 from "../../images/Portfolio/kopec_prague/kopec-6.webp";
+import kopecOriginal7 from "../../images/Portfolio/kopec_prague/kopec-7.webp";
+import kopecOriginal8 from "../../images/Portfolio/kopec_prague/kopec-8.webp";
+import kopecOriginal9 from "../../images/Portfolio/kopec_prague/kopec-9.webp";
+import kopecOriginal10 from "../../images/Portfolio/kopec_prague/kopec-10.webp";
+import kopecOriginal11 from "../../images/Portfolio/kopec_prague/kopec-11.webp";
+import kopecOriginal12 from "../../images/Portfolio/kopec_prague/kopec-12.webp";
 
 //Netzah, Israel
 import netzahOriginal1 from "../../images/Portfolio_Original/netzah_israel/netzah-1.webp";
@@ -205,7 +212,7 @@ const images = [
     src: vrtour,
     category: "vr",
     title: "Virtual Tour",
-    original: "http://vfluxstudio.com/vr_tour",
+    original: "https://vfluxstudio.com/vr_tour",
   },
 
   //EHAD
@@ -322,31 +329,36 @@ const images = [
     src: kopec4,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_1",
+    original: "https://vfluxstudio.com/vrs/kopec_1",
+    modal: kopecOriginal4,
   },
   {
     src: kopec5,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_4",
+    original: "https://vfluxstudio.com/vrs/kopec_4",
+    modal: kopecOriginal5,
   },
   {
     src: kopec6,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_3",
+    original: "https://vfluxstudio.com/vrs/kopec_3",
+    modal: kopecOriginal6,
   },
   {
     src: kopec7,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_2",
+    original: "https://vfluxstudio.com/vrs/kopec_2",
+    modal: kopecOriginal7,
   },
   {
     src: kopec8,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_7",
+    original: "https://vfluxstudio.com/vrs/kopec_7",
+    modal: kopecOriginal8,
   },
   {
     src: kopec9,
@@ -358,19 +370,22 @@ const images = [
     src: kopec10,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_5",
+    original: "https://vfluxstudio.com/vrs/kopec_5",
+    modal: kopecOriginal10,
   },
   {
     src: kopec11,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_6",
+    original: "https://vfluxstudio.com/vrs/kopec_6",
+    modal: kopecOriginal11,
   },
   {
     src: kopec12,
     category: "vr",
     title: "kopec, Prague",
-    original: "http://vfluxstudio.com/vrs/kopec_8",
+    original: "https://vfluxstudio.com/vrs/kopec_8",
+    modal: kopecOriginal12,
   },
 
   //Netzah
