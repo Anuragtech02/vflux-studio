@@ -12,7 +12,7 @@ const Modal = ({ images, image, open }) => {
 
   useEffect(() => {
     setLoading(true);
-    image.category === "stills"
+    image.category === "stills" || image.category === "animation"
       ? setMainImage(image.original)
       : setMainImage(image.modal);
 
