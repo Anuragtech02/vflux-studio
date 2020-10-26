@@ -213,6 +213,7 @@ const images = [
     category: "vr",
     title: "Virtual Tour",
     original: "https://vfluxstudio.com/vr_tour",
+    modal: vrtour,
   },
 
   //EHAD

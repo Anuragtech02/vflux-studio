@@ -25,9 +25,16 @@ const Modal = ({ images, image, open }) => {
     e.stopPropagation();
     if (index > 0) {
       setIndex((curr) => curr - 1);
-      images[index - 1].category === "stills"
-        ? setMainImage(() => images[index - 1].original)
-        : setMainImage(() => images[index - 1].modal);
+      if (images[index - 1].category === "stills") {
+        setMainImage(() => images[index - 1].original);
+      } else if (images[index - 1].category === "animation") {
+        setMainImage(() => images[index - 1].src);
+      } else if (images[index - 1].category === "vr") {
+        setMainImage(() => images[index - 1].modal);
+      }
+      // images[index - 1].category === "stills"
+      //   ? setMainImage(() => images[index - 1].original)
+      //   : setMainImage(() => images[index - 1].modal);
       // setMainImage(() => images[index - 1].original);
       setTitle(() => images[index - 1].title);
     }
@@ -37,9 +44,16 @@ const Modal = ({ images, image, open }) => {
     e.stopPropagation();
     if (index < images.length - 1) {
       setIndex((curr) => curr + 1);
-      images[index + 1].category === "stills"
-        ? setMainImage(() => images[index + 1].original)
-        : setMainImage(() => images[index + 1].modal);
+      if (images[index + 1].category === "stills") {
+        setMainImage(() => images[index + 1].original);
+      } else if (images[index + 1].category === "animation") {
+        setMainImage(() => images[index + 1].src);
+      } else if (images[index + 1].category === "vr") {
+        setMainImage(() => images[index + 1].modal);
+      }
+      // images[index + 1].category === "stills"
+      //   ? setMainImage(() => images[index + 1].original)
+      //   : setMainImage(() => images[index + 1].modal);
       // setMainImage(() => images[index + 1].original);
       setTitle(() => images[index + 1].title);
     }
