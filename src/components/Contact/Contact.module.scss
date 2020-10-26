@@ -4,13 +4,13 @@
   width: 100%;
   flex-direction: column;
   .bannerCont {
-    padding: 20px 0;
+    padding: 60px 0;
   }
 
   .contactInfo {
     padding: 20px 0;
     h4 {
-      font-size: 1.8rem !important;
+      font-size: 1.8rem;
       color: var(--primaryColor);
       text-transform: uppercase;
       letter-spacing: 6px;
@@ -20,7 +20,7 @@
       font-family: "Playfair Display", serif;
       font-style: italic;
       font-weight: 400;
-      font-size: 1.7rem !important;
+      font-size: 1.7rem;
       span {
         font-weight: 600;
         font-style: normal;
@@ -35,7 +35,7 @@
       text-align: center;
       margin: 10px 0;
       line-height: 2rem;
-      font-size: 1.1rem !important;
+      font-size: 1.1rem;
     }
     .contactNo {
       margin: 20px 0;
@@ -124,6 +124,11 @@
       font-size: 2.5rem;
     }
   }
+  .contactInfo {
+    h4 {
+      text-align: center;
+    }
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -137,13 +142,24 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .contactInfo {
+    .contactNo {
+      font-size: 0.8rem !important;
+    }
+  }
+  .mapForm {
+  }
+}
+
 @media screen and (max-width: 400px) {
   .contactInfo {
     h1 {
       font-size: 2.2rem !important;
     }
     .contactNo {
-      font-size: 0.8rem !important;
+      font-size: 0.7rem !important;
+      margin-left: -30px !important;
     }
   }
 }
@@ -164,12 +180,7 @@
         font-size: 1.3rem !important;
       }
       .contactNo {
-        margin: 20px 0;
         font-size: 1rem;
-        // color: rgba(255, 255, 255, 0.3);
-        color: var(--primaryColor);
-        font-weight: 600;
-        letter-spacing: 5px;
       }
     }
   }
