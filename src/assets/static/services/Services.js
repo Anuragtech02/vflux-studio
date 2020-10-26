@@ -31,14 +31,14 @@ const services = [
     icon: "fas fa-feather-alt",
     image: image4,
     message:
-      "Digital marketing is a marketing aspect that uses internet and online digital technology such as personal computers , cell phones and other digital media and platforms to promote goods and services.",
+      "Digital marketing is a marketing aspect that uses the internet and online digital technology such as personal computers, cell phones, and other digital media and platforms to promote goods and services.",
   },
   {
     title: "Graphic/Web Designing",
     icon: "fas fa-palette",
     image: image5,
     message:
-      "Graphic design is the process of visual communication and problem-solving through the use of typography, photography, iconography and illustration. Web design refers to the design of websites that are displayed on the internet. It usually refers to the user experience aspects of website development rather than software development.",
+      "Graphic design is the method of visual communication and problem-solving through typography, photography, iconography, and illustration. Web design refers to the designing of websites that can see on the Internet. It typically applies to user experience with elements of website development rather than software development.",
   },
 ];
 

@@ -47,7 +47,7 @@ const Footer = () => {
         ></i>
       </div>
       <div className={styles.copyright}>
-        <p>© 2020 Unified Consulting. All Right Reserved.</p>
+        <p>© 2020 Vflux Studio. All Right Reserved.</p>
       </div>
     </div>
   );

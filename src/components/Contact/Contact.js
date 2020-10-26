@@ -17,7 +17,9 @@ const Contact = () => {
         <title>Vflux Studio | Contact</title>
         <meta name="description" content="Vflux Studio Contact" />
       </Helmet>
-      <Banner />
+      <div className={styles.bannerCont}>
+        <Banner />
+      </div>
       <div className={classNames(styles.contactInfo, styles.flexColumn)}>
         <h4>Contact Details</h4>
         <h1>

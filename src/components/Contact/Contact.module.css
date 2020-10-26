@@ -48,12 +48,16 @@
           flex-direction: column;
 }
 
+.container .bannerCont {
+  padding: 20px 0;
+}
+
 .container .contactInfo {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 
 .container .contactInfo h4 {
-  font-size: 1.2rem;
+  font-size: 1.8rem !important;
   color: var(--primaryColor);
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -64,7 +68,7 @@
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 3rem;
+  font-size: 1.7rem !important;
 }
 
 .container .contactInfo h1 span {
@@ -81,7 +85,7 @@
   text-align: center;
   margin: 10px 0;
   line-height: 2rem;
-  font-size: 1.1rem;
+  font-size: 1.1rem !important;
 }
 
 .container .contactInfo .contactNo {
@@ -204,6 +208,28 @@
   }
   .contactInfo .contactNo {
     font-size: 0.8rem !important;
+  }
+}
+
+@media screen and (min-width: 1950px) {
+  .container .contactInfo h4 {
+    font-size: 2rem !important;
+    letter-spacing: 6px;
+  }
+  .container .contactInfo h1 {
+    font-size: 1.9rem !important;
+  }
+  .container .contactInfo p {
+    margin: 10px 0;
+    line-height: 2rem;
+    font-size: 1.3rem !important;
+  }
+  .container .contactInfo .contactNo {
+    margin: 20px 0;
+    font-size: 1rem;
+    color: var(--primaryColor);
+    font-weight: 600;
+    letter-spacing: 5px;
   }
 }
 /*# sourceMappingURL=Contact.module.css.map */

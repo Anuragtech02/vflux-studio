@@ -137,7 +137,7 @@ const Portfolio = ({ loading, setLoading }) => {
                 style={{
                   opacity:
                     image.category === "animation" || image.category === "vr"
-                      ? "0.8"
+                      ? "0.7"
                       : "1",
                 }}
               />
