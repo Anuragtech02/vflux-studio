@@ -13,7 +13,7 @@
 
       .whatWeDo {
         padding: 50px;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(0, 0, 0, 0.85);
 
         .heading {
           width: 100%;
@@ -114,7 +114,8 @@
     .details {
       padding: 0 30px !important;
       padding-top: 15px !important;
-      justify-content: flex-start !important;
+      // justify-content: flex-start !important;
+
       p {
         font-size: 1rem;
       }
@@ -135,7 +136,7 @@
     .details {
       padding: 0 30px !important;
       padding-top: 15px !important;
-      justify-content: flex-start !important;
+      justify-content: center !important;
       p {
         font-size: 1rem;
       }

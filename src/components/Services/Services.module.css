@@ -55,7 +55,7 @@
 
 .container .content .whatWeDoContainer .whatWeDo {
   padding: 50px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .container .content .whatWeDoContainer .whatWeDo .heading {
@@ -197,9 +197,6 @@
   .cardRow .details {
     padding: 0 30px !important;
     padding-top: 15px !important;
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
   }
   .cardRow .details p {
     font-size: 1rem;
@@ -223,9 +220,9 @@
   .cardRow .details {
     padding: 0 30px !important;
     padding-top: 15px !important;
-    -webkit-box-pack: start !important;
-        -ms-flex-pack: start !important;
-            justify-content: flex-start !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
   }
   .cardRow .details p {
     font-size: 1rem;

@@ -30,7 +30,7 @@ const Services = ({ scrollPosition }) => {
         <title>Vflux Studio | Services</title>
         <meta
           name="description"
-          content=" We use cutting-edge tools and techniques for real life rendering to create immersive and detailed images that effectively narrates your unique brand story. "
+          content="We use cutting-edge tools and techniques for real life rendering to create immersive and detailed images that effectively narrates your unique brand story. "
         />
         <meta property="og:title" content="Vflux Studio | Services" />
       </Helmet>

@@ -34,7 +34,9 @@ const About = () => {
         <title>Vflux Studio | About</title>
         <meta name="description" content="Vflux Studio About" />
       </Helmet>
-      <Banner />
+      <div style={{ marginTop: "50px" }}>
+        <Banner />
+      </div>
       <div className={styles.content}>
         <div className={styles.header}>
           <h3>About Us</h3>
