@@ -1,8 +1,18 @@
 @import "../../assets/CSS/Common.scss";
 
 .container {
+  .servicesHeading {
+    padding: 50px 0;
+    margin-top: 100px;
+    h3 {
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: var(--primaryColor);
+      letter-spacing: 10px;
+    }
+  }
   .content {
-    padding: 100px 0;
+    padding: 20px 0;
     .whatWeDoContainer {
       width: 70%;
       margin: auto;
@@ -23,7 +33,7 @@
             text-transform: uppercase;
             color: var(--primaryColor);
             letter-spacing: 5px;
-            font-size: 1.1rem;
+            font-size: 1.4rem;
           }
         }
         .gridContainer {
@@ -38,7 +48,7 @@
       }
     }
     .services {
-      padding: 100px 10px 20px 10px;
+      padding: 80px 10px 20px 10px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -55,6 +65,7 @@
         font-family: "Playfair Display", serif;
         font-weight: 600;
         margin: 30px auto;
+        color: var(--primaryColor);
         span {
           font-family: "Playfair Display", serif;
           font-style: italic;

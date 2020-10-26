@@ -40,8 +40,20 @@
   list-style: none !important;
 }
 
+.container .servicesHeading {
+  padding: 50px 0;
+  margin-top: 100px;
+}
+
+.container .servicesHeading h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--primaryColor);
+  letter-spacing: 10px;
+}
+
 .container .content {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 
 .container .content .whatWeDoContainer {
@@ -70,7 +82,7 @@
   text-transform: uppercase;
   color: var(--primaryColor);
   letter-spacing: 5px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
 }
 
 .container .content .whatWeDoContainer .whatWeDo .gridContainer {
@@ -85,7 +97,7 @@
 }
 
 .container .content .services {
-  padding: 100px 10px 20px 10px;
+  padding: 80px 10px 20px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -114,6 +126,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 600;
   margin: 30px auto;
+  color: var(--primaryColor);
 }
 
 .container .content .services h1 span {

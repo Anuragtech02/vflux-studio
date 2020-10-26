@@ -31,7 +31,7 @@ const services = [
     icon: "fas fa-feather-alt",
     image: image4,
     message:
-      "Digital marketing is the component of marketing that utilises internet and online based digital technologies such as desktop computers, mobile phones and other digital media and platforms to promote products and services.",
+      "Digital marketing is a marketing aspect that uses internet and online digital technology such as personal computers , cell phones and other digital media and platforms to promote goods and services.",
   },
   {
     title: "Graphic/Web Designing",

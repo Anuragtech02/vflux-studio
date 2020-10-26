@@ -34,7 +34,10 @@ const Services = ({ scrollPosition }) => {
         />
         <meta property="og:title" content="Vflux Studio | Services" />
       </Helmet>
-      <Banner />
+      {/* <Banner /> */}
+      <div className={styles.servicesHeading}>
+        <h3>Our Services</h3>
+      </div>
       <div className={styles.content}>
         <div className={styles.whatWeDoContainer}>
           <div className={styles.whatWeDo}>
@@ -60,7 +63,7 @@ const Services = ({ scrollPosition }) => {
           </div>
         </div>
         <div className={styles.services}>
-          <h3>Our Services</h3>
+          {/* <h3>Our Services</h3> */}
           <h1>
             We'll develop <span>for you</span>
           </h1>
