@@ -3,11 +3,13 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import styles from "./App.module.css";
 import { CircularProgress } from "@material-ui/core";
 import { Navbar, Footer } from "./components";
+import NotFound from "./components/NotFound/NotFound";
 
 const Home = lazy(() => import("./components/Home/Home"));
 const About = lazy(() => import("./components/About/About"));
 const Services = lazy(() => import("./components/Services/Services"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
+// const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 
 const App = () => {
   const navbar = useRef(null);
@@ -61,8 +63,10 @@ const App = () => {
                 <OpenComponent component={Services} location="Services" />
               )}
             />
+            <Route component={NotFound} />
           </Switch>
         </div>
+
         <footer className={styles.footer}>
           <Footer />
         </footer>
