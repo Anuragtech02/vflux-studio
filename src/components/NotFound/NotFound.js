@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./NotFound.module.css";
 import { withRouter } from "react-router";
+import Helmet from "react-helmet";
 
 const NotFound = ({ history }) => {
   const [timer, setTimer] = React.useState(5);
@@ -20,6 +21,9 @@ const NotFound = ({ history }) => {
       <p>
         Redirecting to homepage in <span>{timer}</span>
       </p>
+      <Helmet>
+        <title>404</title>
+      </Helmet>
     </div>
   );
 };
