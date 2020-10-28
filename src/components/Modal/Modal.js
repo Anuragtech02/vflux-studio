@@ -22,6 +22,7 @@ const Modal = ({ images, image, open }) => {
   }, [image, images]);
 
   const onClickLeft = (e) => {
+    setLoading(true);
     e.stopPropagation();
     if (index > 0) {
       setIndex((curr) => curr - 1);
@@ -41,6 +42,7 @@ const Modal = ({ images, image, open }) => {
   };
 
   const onClickRight = (e) => {
+    setLoading(true);
     e.stopPropagation();
     if (index < images.length - 1) {
       setIndex((curr) => curr + 1);

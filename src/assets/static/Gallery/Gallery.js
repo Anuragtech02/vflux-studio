@@ -21,8 +21,6 @@ import ehad6 from "../../images/Portfolio/ehad_israel/ehad-6.webp";
 import ehad7 from "../../images/Portfolio/ehad_israel/ehad-7.webp";
 import ehad8 from "../../images/Portfolio/ehad_israel/ehad-8.webp";
 import ehad9 from "../../images/Portfolio/ehad_israel/ehad-9.webp";
-import ehad10 from "../../images/Portfolio/ehad_israel/ehad-10.webp";
-import ehad11 from "../../images/Portfolio/ehad_israel/ehad-11.webp";
 
 //Hoffein, Israel
 import hoffein1 from "../../images/Portfolio/hoffein_israel/hoffein-1.webp";
@@ -95,8 +93,6 @@ import ehadOriginal6 from "../../images/Portfolio_Original/ehad_israel/ehad-6.we
 import ehadOriginal7 from "../../images/Portfolio_Original/ehad_israel/ehad-7.webp";
 import ehadOriginal8 from "../../images/Portfolio_Original/ehad_israel/ehad-8.webp";
 import ehadOriginal9 from "../../images/Portfolio_Original/ehad_israel/ehad-9.webp";
-import ehadOriginal10 from "../../images/Portfolio_Original/ehad_israel/ehad-10.webp";
-import ehadOriginal11 from "../../images/Portfolio_Original/ehad_israel/ehad-11.webp";
 
 //Hoffein, Israel
 import hoffeinOriginal1 from "../../images/Portfolio_Original/hoffein_israel/hoffein-1.webp";
@@ -271,18 +267,6 @@ const images = [
     category: "stills",
     title: "EHAD, Israel",
     original: ehadOriginal9,
-  },
-  {
-    src: ehad10,
-    category: "stills",
-    title: "EHAD, Israel",
-    original: ehadOriginal10,
-  },
-  {
-    src: ehad11,
-    category: "stills",
-    title: "EHAD, Israel",
-    original: ehadOriginal11,
   },
 
   //Hoffein
