@@ -113,9 +113,9 @@
 }
 
 .navLinksMobile {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
@@ -126,19 +126,47 @@
   -webkit-transform: translate3d(100%, 0, 0);
           transform: translate3d(100%, 0, 0);
   background: black;
-  z-index: 50;
+  z-index: 5000;
   -webkit-transition: all 0.6s ease-in-out;
   transition: all 0.6s ease-in-out;
+  height: calc(var(--vh, 1vh) * 100) !important;
 }
 
 .navLinksMobile .navLink {
-  margin: 40px 0;
+  margin: 30px 0 !important;
 }
 
 .navLinksMobile .navLink:nth-child(1) {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.navLinksMobile .navLink:nth-child(1) img {
+  width: 150px;
+  margin-top: 60px;
+}
+
+.navLinksMobile .social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 20px 0;
+}
+
+.navLinksMobile .social i {
+  cursor: pointer;
+  margin: 0 10px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navLinksMobile .social i:hover {
+  color: var(--primaryColor);
 }
 
 .ham {
@@ -180,6 +208,7 @@
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
   background: black;
+  height: calc(var(--vh, 1vh) * 100) !important;
 }
 
 .inactive {
@@ -246,7 +275,6 @@
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    padding: 20%;
   }
   .logo img {
     max-width: 150px;
@@ -255,10 +283,13 @@
 
 @media screen and (max-width: 500px) {
   .navLinksMobile {
-    width: 100%;
+    width: 70%;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .navLinksMobile .mgHome {
+    margin: 30px 0 10px 0 !important;
   }
 }
 

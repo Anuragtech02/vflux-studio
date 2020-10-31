@@ -73,6 +73,13 @@ const Navbar = ({ history }) => {
     }
   };
 
+  const onClickSocial = (link) => {
+    const a = document.createElement("a");
+    a.href = link;
+    a.target = "_blank";
+    a.click();
+  };
+
   return (
     <nav className={styles.container}>
       <Link className={styles.noDecoration} to="/">
@@ -154,7 +161,7 @@ const Navbar = ({ history }) => {
           <img src={logo} alt="logo" />
         </li>
         <Link
-          className={styles.noDecoration}
+          className={classNames(styles.noDecoration, styles.mgHome)}
           onClick={() => {
             setMenuClicked(styles.nothing);
             setSidebar(styles.inactive);
@@ -197,6 +204,42 @@ const Navbar = ({ history }) => {
             Contact Us
           </li>
         </Link>
+        <li className={classNames(styles.navLink)}>
+          <div className={classNames(styles.social, styles.flexRow)}>
+            <i
+              className="fab fa-facebook-square"
+              onClick={() => {
+                onClickSocial(
+                  "https://www.facebook.com/Vfluxstudio-102258501673102/?modal=admin_todo_tour"
+                );
+              }}
+            ></i>
+            <i
+              className="fab fa-behance"
+              onClick={() => {
+                onClickSocial("https://behance.net/vfluxstudio");
+              }}
+            ></i>
+            <i
+              className="fab fa-youtube"
+              onClick={() => {
+                onClickSocial("https://www.youtube.com/");
+              }}
+            ></i>
+            <i
+              className="fab fa-instagram"
+              onClick={() => {
+                onClickSocial("https://instagram.com/");
+              }}
+            ></i>
+            <i
+              className="fab fa-linkedin-in"
+              onClick={() => {
+                onClickSocial("https://linkedin.com/");
+              }}
+            ></i>
+          </div>
+        </li>
       </ul>
     </nav>
   );
