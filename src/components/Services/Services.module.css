@@ -50,6 +50,7 @@
   text-transform: uppercase;
   color: var(--primaryColor);
   letter-spacing: 10px;
+  text-align: center;
 }
 
 .container .content {
@@ -285,6 +286,12 @@
     font-size: 1.8rem !important;
     text-align: center;
   }
+  .services .iconTitle {
+    padding: 10px 0;
+  }
+  .services .iconTitle h2 {
+    font-size: 1.2rem;
+  }
   .cardRow .details {
     padding: 10px 0 !important;
   }
@@ -295,7 +302,7 @@
     width: 90% !important;
   }
   .services {
-    padding: 80px 10px 10px 0 !important;
+    padding: 80px 0 10px 0 !important;
   }
 }
 /*# sourceMappingURL=Services.module.css.map */

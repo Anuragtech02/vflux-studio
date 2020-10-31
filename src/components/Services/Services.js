@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import styles from "./Services.module.css";
-import { Banner } from "../../components";
 import { Grid } from "@material-ui/core";
 import services from "../../assets/static/services/Services";
 import WhatWeDoData from "../../assets/static/services/WhatWeDo";

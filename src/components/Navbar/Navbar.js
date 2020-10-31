@@ -70,6 +70,10 @@ const Navbar = ({ history }) => {
     } else {
       setMenuClicked(styles.nothing);
       setSidebar(styles.inactive);
+      const navLinks = document.querySelectorAll("#sidebar li");
+      navLinks.forEach((link) => {
+        link.style.animation = "";
+      });
     }
   };
 
