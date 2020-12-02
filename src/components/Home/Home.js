@@ -43,6 +43,7 @@ const Home = ({ loading, setLoading }) => {
             loop
             onLoad={handleVideoLoad}
             preload="none"
+            style={{ objectFit: "cover" }}
           />
         </div>
       </div>
