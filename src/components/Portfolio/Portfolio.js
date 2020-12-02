@@ -4,7 +4,7 @@ import Isotope from "isotope-layout";
 import images from "../../assets/static/Gallery/Gallery";
 import { Modal } from "../../components";
 
-const Portfolio = ({ loading, setLoading }) => {
+const Portfolio = ({ loading, setLoading, loadFlag, setLoadFLag }) => {
   const onClickMenu = (item) => {
     setFilterKey(item);
   };

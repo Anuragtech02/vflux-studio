@@ -36,7 +36,7 @@ const Contact = () => {
           <div className={styles.map}>
             <iframe
               title="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223993.60806234134!2d76.95126634185982!3d28.692634061031026!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d047309fff32f%3A0xfc5606ed1b5d46c3!2sDelhi!5e0!3m2!1sen!2sin!4v1602830143593!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.6765131883176!2d77.19892361551723!3d28.51937879594317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1fb45133943%3A0xd19902f9cbebbd7a!2s32%2C%20Lane%20Number%202%2C%20near%20Saket%2C%20Saidulajab%2C%20Saiyad%20Ul%20Ajaib%20Village%2C%20Sainik%20Farm%2C%20New%20Delhi%2C%20Delhi%20110030!5e0!3m2!1sen!2sin!4v1606874588126!5m2!1sen!2sin"
               width="100%"
               height="450"
               frameBorder="0"

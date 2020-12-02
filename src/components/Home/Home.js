@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Home.module.css";
 import homeVideo from "../../assets/videos/utalika-1.mp4";
 import videPoster from "../../assets/videos/video-poster.webp";
@@ -6,13 +6,26 @@ import Portfolio from "../Portfolio/Portfolio";
 import { Helmet } from "react-helmet";
 
 const Home = ({ loading, setLoading }) => {
-  React.useEffect(() => {
+  const [loadFlag, setLoadFlag] = useState(false);
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  useEffect(() => {
     if (sessionStorage.getItem("firstTime") === null) {
       sessionStorage.setItem("firstTime", "yes");
     } else {
       sessionStorage.setItem("firstTime", "no");
     }
   }, []);
+
+  // useEffect(() => {
+  //   if (loadFlag) {
+  //     if (videoLoaded) setLoading(false);
+  //   }
+  // }, [loadFlag, videoLoaded]);
+
+  const handleVideoLoad = () => {
+    setVideoLoaded(true);
+  };
 
   return (
     <div className={styles.container}>
@@ -28,6 +41,8 @@ const Home = ({ loading, setLoading }) => {
             autoPlay
             muted
             loop
+            onLoad={handleVideoLoad}
+            preload="none"
           />
         </div>
       </div>
@@ -36,7 +51,12 @@ const Home = ({ loading, setLoading }) => {
       </h1>
       <div className={styles.portfolio}>
         <h3>Our Works</h3>
-        <Portfolio loading={loading} setLoading={setLoading} />
+        <Portfolio
+          loadFlag={loadFlag}
+          setLoadFlag={setLoadFlag}
+          loading={loading}
+          setLoading={setLoading}
+        />
       </div>
     </div>
   );
