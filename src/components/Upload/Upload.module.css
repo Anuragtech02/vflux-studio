@@ -1,0 +1,125 @@
+.flexRow, .flexColumn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexColumn {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: var(--fixedWidth);
+  margin: auto;
+}
+
+.noDecoration {
+  text-decoration: none !important;
+  list-style: none !important;
+}
+
+.container {
+  margin-top: 50px;
+  min-height: calc(calc(var(--vh, 1vh) * 92) - 50px) !important;
+}
+
+.dropZone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-height: 500px;
+  background: #3b3b3b;
+  outline: none !important;
+  border: none !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.dropZone:hover {
+  background: #2a2a2a;
+}
+
+.hidden {
+  opacity: 0;
+  width: 0;
+}
+
+.flexColumn {
+  width: 100%;
+}
+
+.flexColumn h3 {
+  margin: 20px 0;
+  font-size: 2rem;
+}
+
+.details {
+  height: 100%;
+}
+
+.details .inputField {
+  padding: 20px;
+  outline: none;
+  border: none;
+  width: 60%;
+  margin: 20px auto;
+}
+
+.menuOption {
+  padding: 10px !important;
+  font-size: 1.1rem !important;
+}
+
+.menuOption:hover {
+  background: red;
+}
+
+.submitBtn {
+  border: none;
+  outline: none;
+  padding: 18px 25px;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-top: auto;
+  justify-self: flex-end;
+}
+
+.submitBtn:hover {
+  background: var(--primaryColor);
+}
+/*# sourceMappingURL=Upload.module.css.map */

@@ -9,6 +9,7 @@ const Home = lazy(() => import("./components/Home/Home"));
 const About = lazy(() => import("./components/About/About"));
 const Services = lazy(() => import("./components/Services/Services"));
 const Contact = lazy(() => import("./components/Contact/Contact"));
+const Upload = lazy(() => import("./components/Upload/Upload"));
 // const NotFound = lazy(() => import("./components/NotFound/NotFound"));
 
 const App = () => {
@@ -63,6 +64,13 @@ const App = () => {
                 <OpenComponent component={Services} location="Services" />
               )}
             />
+            <Route
+              path="/upload"
+              exact
+              component={() => (
+                <OpenComponent component={Upload} location="Upload" />
+              )}
+            />
             <Route component={NotFound} />
           </Switch>
         </div>
@@ -82,23 +90,9 @@ const OpenComponent = ({ component: Component, location }) => {
   const loadingTime = 500;
 
   React.useEffect(() => {
-    // if (location === "Home") {
-    //   if (sessionStorage.getItem("firstTime") === null) {
-    //     console.log("Yes");
-
-    //     setTimeout(() => {
-    //       setOpen(true);
-    //     }, 3000);
-    //   } else {
-    //     setTimeout(() => {
-    //       setOpen(true);
-    //     }, loadingTime);
-    //   }
-    // } else {
     setTimeout(() => {
       setOpen(true);
     }, loadingTime);
-    // }
   }, []);
 
   return (

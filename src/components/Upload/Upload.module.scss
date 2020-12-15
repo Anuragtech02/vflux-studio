@@ -1,0 +1,66 @@
+@import "../../assets/CSS/Common.scss";
+
+.container {
+  margin-top: 50px;
+  min-height: calc(calc(var(--vh, 1vh) * 92) - 50px) !important;
+}
+.dropZone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
+  background: rgb(59, 59, 59);
+  outline: none !important;
+  border: none !important;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: rgb(42, 42, 42);
+  }
+}
+.hidden {
+  opacity: 0;
+  width: 0;
+}
+.flexColumn {
+  width: 100%;
+  h3 {
+    margin: 20px 0;
+    font-size: 2rem;
+  }
+}
+.details {
+  height: 100%;
+  .inputField {
+    padding: 20px;
+    outline: none;
+    border: none;
+    width: 60%;
+    margin: 20px auto;
+  }
+}
+.menuOption {
+  padding: 10px !important;
+  font-size: 1.1rem !important;
+  &:hover {
+    background: red;
+  }
+}
+.submitBtn {
+  border: none;
+  outline: none;
+  padding: 18px 25px;
+  min-width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    background: var(--primaryColor);
+  }
+  margin-top: auto;
+  justify-self: flex-end;
+}
