@@ -3,12 +3,38 @@ import styles from "./Contact.module.css";
 import { Grid } from "@material-ui/core";
 import classNames from "classnames";
 import { Helmet } from "react-helmet";
+import axios from "axios";
 
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [mailSent, setMailSent] = useState(false);
+  const [error, setError] = useState(null);
+
+  const onSubmit = (e) => {
+    e.preventDefault();
+    axios({
+      method: "post",
+      url: "https://vfluxstudio.com/api/contact.php",
+      headers: { "content-type": "application/json" },
+      data: {
+        name,
+        email,
+        subject,
+        message,
+      },
+    })
+      .then((result) => {
+        setMailSent(result.data.sent);
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => setError(error.message));
+  };
 
   return (
     <div className={styles.container}>
@@ -49,12 +75,13 @@ const Contact = () => {
         </Grid>
         <Grid item md={6} sm={12}>
           <div className={styles.contactForm}>
-            <form>
+            <form onSubmit={onSubmit} action="#">
               <div className={styles.nameEmail}>
                 <input
                   className={styles.inputField}
                   type="text"
                   placeholder="Your name"
+                  name="name"
                   required
                   value={name}
                   onChange={(e) => setName(e.target.value)}
@@ -63,6 +90,7 @@ const Contact = () => {
                   className={styles.inputField}
                   type="email"
                   placeholder="Your email"
+                  name="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -73,6 +101,7 @@ const Contact = () => {
                   className={styles.inputField}
                   type="text"
                   placeholder="Subject"
+                  name="subject"
                   required
                   value={subject}
                   onChange={(e) => setSubject(e.target.value)}
@@ -82,13 +111,19 @@ const Contact = () => {
                   type="text"
                   placeholder="Message"
                   required
+                  name="message"
                   rows={10}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                 />
               </div>
+              {mailSent || error ? (
+                <h3>{mailSent ? "Thank you for contact us :)" : error}</h3>
+              ) : null}
               <div className={styles.submitBtn}>
-                <button type="submit">Send Message</button>
+                <button name="submit" type="submit">
+                  Send Message
+                </button>
               </div>
             </form>
           </div>
