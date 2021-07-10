@@ -5,7 +5,7 @@ $_POST = json_decode($rest_json, true);
 
 if (empty($_POST['name']) && empty($_POST['email'])) die();
 
-if ($_POST['submit']) {
+if ($_POST) {
 
   http_response_code(200);
 
@@ -15,7 +15,7 @@ if ($_POST['submit']) {
   $subject = "Contact Form Submission";
   $subject2 = "Copy of your Contact form submission";
 
-  $message = "Name : " . $name . "\nEmail : " . $_POST['email'] . "\n\nMessage : " . $_POST['message'];
+  $message = "Name : " . $name . "\n\nEmail : " . $_POST['email'] . "\n\Subject : " . $_POST['subject'] . "\n\nMessage : " . $_POST['message'];
   // $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
 
   $headers = "MIME-Version: 1.0\r\n";
